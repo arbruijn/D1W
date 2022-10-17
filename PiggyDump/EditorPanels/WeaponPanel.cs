@@ -39,7 +39,7 @@ namespace Descent2Workshop.EditorPanels
     {
         private Weapon weapon;
         //Needed to remap graphics
-        private PIGFile piggyFile; //aaa
+        private IImageProvider piggyFile; //aaa
         private Palette palette; //aaaaaaaaaaaaaaaaaaaa
         private bool isLocked = false;
 
@@ -58,7 +58,7 @@ namespace Descent2Workshop.EditorPanels
             this.tabPage = tabPage;
         }
 
-        public void Init(List<string> SoundNames, List<VClip> VClips, List<Weapon> Weapons, List<Polymodel> Models, PIGFile piggyFile, Palette palette)
+        public void Init(List<string> SoundNames, List<VClip> VClips, List<Weapon> Weapons, List<Polymodel> Models, IImageProvider piggyFile, Palette palette, bool d1)
         {
             this.piggyFile = piggyFile;
             this.palette = palette;
@@ -99,9 +99,25 @@ namespace Descent2Workshop.EditorPanels
             cbWeaponModel1.Items.AddRange(stringarray);
             cbWeaponModel2.Items.AddRange(stringarray);
             isLocked = false;
+
+            txtWeaponSpeedvar.Visible = !d1;
+            txtWeaponFlashSize.Visible = !d1;
+            txtWeaponABSize.Visible = !d1;
+            cbWeaponChildren.Visible = !d1;
+            txtWeaponMPScale.Visible = !d1;
+            txtWeaponCockpitImageh.Visible = !d1;
+            cbWeaponPlacable.Visible = !d1;
+
+            lbWeaponSpeedvar.Visible = !d1;
+            lbWeaponFlashSize.Visible = !d1;
+            lbWeaponABSize.Visible = !d1;
+            lbWeaponChildren.Visible = !d1;
+            lbWeaponMPScale.Visible = !d1;
+            lbWeaponCockpitImageh.Visible = !d1;
+            buWeaponCockpitImageh.Visible = !d1;
         }
 
-        public void Init(List<string> SoundNames, List<VClip> VClips, string[] WeaponNames, string[] ModelNames, PIGFile piggyFile, Palette palette)
+        public void Init(List<string> SoundNames, List<VClip> VClips, string[] WeaponNames, string[] ModelNames, IImageProvider piggyFile, Palette palette)
         {
             this.piggyFile = piggyFile;
             this.palette = palette;

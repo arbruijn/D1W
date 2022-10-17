@@ -50,7 +50,7 @@ namespace Descent2Workshop.EditorPanels
         private TransactionManager transactionManager;
         private int tabPage;
 
-        public PolymodelPanel(TransactionManager transactionManager, int tabPage, PIGFile piggyFile, Palette palette, EditorHAMFile datafile = null)
+        public PolymodelPanel(TransactionManager transactionManager, int tabPage, IImageProvider piggyFile, Palette palette, EditorHAMFile datafile = null)
         {
             InitializeComponent();
             this.transactionManager = transactionManager;
@@ -76,7 +76,7 @@ namespace Descent2Workshop.EditorPanels
                 modelRenderer = new ModelRenderer(piggyFile, palette);
         }
 
-        public PolymodelPanel(TransactionManager transactionManager, int tabPage, PIGFile piggyFile, Palette palette, EditorHXMFile datafile)
+        public PolymodelPanel(TransactionManager transactionManager, int tabPage, IImageProvider piggyFile, Palette palette, EditorHXMFile datafile)
         {
             InitializeComponent();
             this.transactionManager = transactionManager;

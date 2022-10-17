@@ -30,7 +30,7 @@
         {
             this.RobotModelComboBox = new System.Windows.Forms.ComboBox();
             this.cbRobotDeathSound = new System.Windows.Forms.ComboBox();
-            this.label47 = new System.Windows.Forms.Label();
+            this.lbRobotDeathSound = new System.Windows.Forms.Label();
             this.cbRobotHitSound = new System.Windows.Forms.ComboBox();
             this.label46 = new System.Windows.Forms.Label();
             this.RobotDeathVClipComboBox = new System.Windows.Forms.ComboBox();
@@ -44,29 +44,29 @@
             this.cbRobotAttackSound = new System.Windows.Forms.ComboBox();
             this.cbRobotSeeSound = new System.Windows.Forms.ComboBox();
             this.cbRobotAI = new System.Windows.Forms.ComboBox();
-            this.label112 = new System.Windows.Forms.Label();
+            this.lbRobotAI = new System.Windows.Forms.Label();
             this.txtRobotGlow = new System.Windows.Forms.TextBox();
-            this.label101 = new System.Windows.Forms.Label();
-            this.label100 = new System.Windows.Forms.Label();
+            this.lbRobotGlow = new System.Windows.Forms.Label();
+            this.lbRobotDyingSound = new System.Windows.Forms.Label();
             this.txtRobotLightcast = new System.Windows.Forms.TextBox();
-            this.label99 = new System.Windows.Forms.Label();
+            this.lbRobotLightcast = new System.Windows.Forms.Label();
             this.txtRobotPursuit = new System.Windows.Forms.TextBox();
-            this.label98 = new System.Windows.Forms.Label();
+            this.lbRobotPursuit = new System.Windows.Forms.Label();
             this.txtRobotAim = new System.Windows.Forms.TextBox();
-            this.label97 = new System.Windows.Forms.Label();
+            this.lbRobotAim = new System.Windows.Forms.Label();
             this.txtRobotDeathRolls = new System.Windows.Forms.TextBox();
-            this.label96 = new System.Windows.Forms.Label();
+            this.lbRobotDeathRolls = new System.Windows.Forms.Label();
             this.txtRobotDeathBlobs = new System.Windows.Forms.TextBox();
-            this.label35 = new System.Windows.Forms.Label();
+            this.lbRobotDeathBlobs = new System.Windows.Forms.Label();
             this.txtRobotHitBlobs = new System.Windows.Forms.TextBox();
-            this.label34 = new System.Windows.Forms.Label();
+            this.lbRobotHitBlobs = new System.Windows.Forms.Label();
             this.txtRobotEnergyDrain = new System.Windows.Forms.TextBox();
             this.txtRobotBadass = new System.Windows.Forms.TextBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
+            this.lbRobotBadass = new System.Windows.Forms.Label();
+            this.lbRobotEnergyDrain = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.RobotDropTypeComboBox = new System.Windows.Forms.ComboBox();
-            this.label134 = new System.Windows.Forms.Label();
+            this.lbRobotTauntSound = new System.Windows.Forms.Label();
             this.txtRobotLight = new System.Windows.Forms.TextBox();
             this.txtRobotDrag = new System.Windows.Forms.TextBox();
             this.txtRobotMass = new System.Windows.Forms.TextBox();
@@ -74,7 +74,7 @@
             this.txtRobotScore = new System.Windows.Forms.TextBox();
             this.txtRobotDropProb = new System.Windows.Forms.TextBox();
             this.txtRobotDrops = new System.Windows.Forms.TextBox();
-            this.label133 = new System.Windows.Forms.Label();
+            this.lbRobotWeapon2 = new System.Windows.Forms.Label();
             this.groupBox20 = new System.Windows.Forms.GroupBox();
             this.cbKamikaze = new System.Windows.Forms.CheckBox();
             this.cbRobotThief = new System.Windows.Forms.CheckBox();
@@ -114,7 +114,7 @@
             this.RobotTurnTime1 = new System.Windows.Forms.TextBox();
             this.RobotFireDelay1 = new System.Windows.Forms.TextBox();
             this.RobotFOV1 = new System.Windows.Forms.TextBox();
-            this.label145 = new System.Windows.Forms.Label();
+            this.lbRobotFireDelay2 = new System.Windows.Forms.Label();
             this.txtRobotFireDelay2 = new System.Windows.Forms.TextBox();
             this.label28 = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
@@ -185,14 +185,14 @@
             this.cbRobotDeathSound.Tag = "DeathSoundNum";
             this.cbRobotDeathSound.SelectedIndexChanged += new System.EventHandler(this.RobotComboBox_SelectedIndexChanged);
             // 
-            // label47
+            // lbRobotDeathSound
             // 
-            this.label47.AutoSize = true;
-            this.label47.Location = new System.Drawing.Point(259, 424);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(71, 13);
-            this.label47.TabIndex = 252;
-            this.label47.Text = "Death sound:";
+            this.lbRobotDeathSound.AutoSize = true;
+            this.lbRobotDeathSound.Location = new System.Drawing.Point(259, 424);
+            this.lbRobotDeathSound.Name = "lbRobotDeathSound";
+            this.lbRobotDeathSound.Size = new System.Drawing.Size(71, 13);
+            this.lbRobotDeathSound.TabIndex = 252;
+            this.lbRobotDeathSound.Text = "Death sound:";
             // 
             // cbRobotHitSound
             // 
@@ -343,14 +343,14 @@
             this.cbRobotAI.Tag = "Behavior";
             this.cbRobotAI.SelectedIndexChanged += new System.EventHandler(this.RobotAI_SelectedIndexChanged);
             // 
-            // label112
+            // lbRobotAI
             // 
-            this.label112.AutoSize = true;
-            this.label112.Location = new System.Drawing.Point(648, 238);
-            this.label112.Name = "label112";
-            this.label112.Size = new System.Drawing.Size(57, 13);
-            this.label112.TabIndex = 239;
-            this.label112.Text = "Default AI:";
+            this.lbRobotAI.AutoSize = true;
+            this.lbRobotAI.Location = new System.Drawing.Point(648, 238);
+            this.lbRobotAI.Name = "lbRobotAI";
+            this.lbRobotAI.Size = new System.Drawing.Size(57, 13);
+            this.lbRobotAI.TabIndex = 239;
+            this.lbRobotAI.Text = "Default AI:";
             // 
             // txtRobotGlow
             // 
@@ -361,23 +361,23 @@
             this.txtRobotGlow.Tag = "Glow";
             this.txtRobotGlow.TextChanged += new System.EventHandler(this.RobotProperty_TextChanged);
             // 
-            // label101
+            // lbRobotGlow
             // 
-            this.label101.AutoSize = true;
-            this.label101.Location = new System.Drawing.Point(268, 33);
-            this.label101.Name = "label101";
-            this.label101.Size = new System.Drawing.Size(34, 13);
-            this.label101.TabIndex = 237;
-            this.label101.Text = "Glow:";
+            this.lbRobotGlow.AutoSize = true;
+            this.lbRobotGlow.Location = new System.Drawing.Point(268, 33);
+            this.lbRobotGlow.Name = "lbRobotGlow";
+            this.lbRobotGlow.Size = new System.Drawing.Size(34, 13);
+            this.lbRobotGlow.TabIndex = 237;
+            this.lbRobotGlow.Text = "Glow:";
             // 
-            // label100
+            // lbRobotDyingSound
             // 
-            this.label100.AutoSize = true;
-            this.label100.Location = new System.Drawing.Point(259, 451);
-            this.label100.Name = "label100";
-            this.label100.Size = new System.Drawing.Size(60, 13);
-            this.label100.TabIndex = 236;
-            this.label100.Text = "Roll sound:";
+            this.lbRobotDyingSound.AutoSize = true;
+            this.lbRobotDyingSound.Location = new System.Drawing.Point(259, 451);
+            this.lbRobotDyingSound.Name = "lbRobotDyingSound";
+            this.lbRobotDyingSound.Size = new System.Drawing.Size(60, 13);
+            this.lbRobotDyingSound.TabIndex = 236;
+            this.lbRobotDyingSound.Text = "Roll sound:";
             // 
             // txtRobotLightcast
             // 
@@ -388,14 +388,14 @@
             this.txtRobotLightcast.Tag = "LightCast";
             this.txtRobotLightcast.TextChanged += new System.EventHandler(this.RobotProperty_TextChanged);
             // 
-            // label99
+            // lbRobotLightcast
             // 
-            this.label99.AutoSize = true;
-            this.label99.Location = new System.Drawing.Point(268, 60);
-            this.label99.Name = "label99";
-            this.label99.Size = new System.Drawing.Size(56, 13);
-            this.label99.TabIndex = 234;
-            this.label99.Text = "Light cast:";
+            this.lbRobotLightcast.AutoSize = true;
+            this.lbRobotLightcast.Location = new System.Drawing.Point(268, 60);
+            this.lbRobotLightcast.Name = "lbRobotLightcast";
+            this.lbRobotLightcast.Size = new System.Drawing.Size(56, 13);
+            this.lbRobotLightcast.TabIndex = 234;
+            this.lbRobotLightcast.Text = "Light cast:";
             // 
             // txtRobotPursuit
             // 
@@ -406,14 +406,14 @@
             this.txtRobotPursuit.Tag = "Pursuit";
             this.txtRobotPursuit.TextChanged += new System.EventHandler(this.RobotProperty_TextChanged);
             // 
-            // label98
+            // lbRobotPursuit
             // 
-            this.label98.AutoSize = true;
-            this.label98.Location = new System.Drawing.Point(435, 238);
-            this.label98.Name = "label98";
-            this.label98.Size = new System.Drawing.Size(42, 13);
-            this.label98.TabIndex = 232;
-            this.label98.Text = "Pursuit:";
+            this.lbRobotPursuit.AutoSize = true;
+            this.lbRobotPursuit.Location = new System.Drawing.Point(435, 238);
+            this.lbRobotPursuit.Name = "lbRobotPursuit";
+            this.lbRobotPursuit.Size = new System.Drawing.Size(42, 13);
+            this.lbRobotPursuit.TabIndex = 232;
+            this.lbRobotPursuit.Text = "Pursuit:";
             // 
             // txtRobotAim
             // 
@@ -424,14 +424,14 @@
             this.txtRobotAim.Tag = "Aim";
             this.txtRobotAim.TextChanged += new System.EventHandler(this.RobotProperty_TextChanged);
             // 
-            // label97
+            // lbRobotAim
             // 
-            this.label97.AutoSize = true;
-            this.label97.Location = new System.Drawing.Point(435, 264);
-            this.label97.Name = "label97";
-            this.label97.Size = new System.Drawing.Size(55, 13);
-            this.label97.TabIndex = 230;
-            this.label97.Text = "Accuracy:";
+            this.lbRobotAim.AutoSize = true;
+            this.lbRobotAim.Location = new System.Drawing.Point(435, 264);
+            this.lbRobotAim.Name = "lbRobotAim";
+            this.lbRobotAim.Size = new System.Drawing.Size(55, 13);
+            this.lbRobotAim.TabIndex = 230;
+            this.lbRobotAim.Text = "Accuracy:";
             // 
             // txtRobotDeathRolls
             // 
@@ -442,14 +442,14 @@
             this.txtRobotDeathRolls.Tag = "DeathRollTime";
             this.txtRobotDeathRolls.TextChanged += new System.EventHandler(this.RobotProperty_TextChanged);
             // 
-            // label96
+            // lbRobotDeathRolls
             // 
-            this.label96.AutoSize = true;
-            this.label96.Location = new System.Drawing.Point(4, 298);
-            this.label96.Name = "label96";
-            this.label96.Size = new System.Drawing.Size(60, 13);
-            this.label96.TabIndex = 228;
-            this.label96.Text = "Death rolls:";
+            this.lbRobotDeathRolls.AutoSize = true;
+            this.lbRobotDeathRolls.Location = new System.Drawing.Point(4, 298);
+            this.lbRobotDeathRolls.Name = "lbRobotDeathRolls";
+            this.lbRobotDeathRolls.Size = new System.Drawing.Size(60, 13);
+            this.lbRobotDeathRolls.TabIndex = 228;
+            this.lbRobotDeathRolls.Text = "Death rolls:";
             // 
             // txtRobotDeathBlobs
             // 
@@ -460,14 +460,14 @@
             this.txtRobotDeathBlobs.Tag = "SmartBlobsOnDeath";
             this.txtRobotDeathBlobs.TextChanged += new System.EventHandler(this.RobotProperty_TextChanged);
             // 
-            // label35
+            // lbRobotDeathBlobs
             // 
-            this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(5, 246);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(83, 13);
-            this.label35.TabIndex = 226;
-            this.label35.Text = "Blobs on Death:";
+            this.lbRobotDeathBlobs.AutoSize = true;
+            this.lbRobotDeathBlobs.Location = new System.Drawing.Point(5, 246);
+            this.lbRobotDeathBlobs.Name = "lbRobotDeathBlobs";
+            this.lbRobotDeathBlobs.Size = new System.Drawing.Size(83, 13);
+            this.lbRobotDeathBlobs.TabIndex = 226;
+            this.lbRobotDeathBlobs.Text = "Blobs on Death:";
             // 
             // txtRobotHitBlobs
             // 
@@ -478,14 +478,14 @@
             this.txtRobotHitBlobs.Tag = "SmartBlobsOnHit";
             this.txtRobotHitBlobs.TextChanged += new System.EventHandler(this.RobotProperty_TextChanged);
             // 
-            // label34
+            // lbRobotHitBlobs
             // 
-            this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(435, 291);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(100, 13);
-            this.label34.TabIndex = 224;
-            this.label34.Text = "Energy blobs on hit:";
+            this.lbRobotHitBlobs.AutoSize = true;
+            this.lbRobotHitBlobs.Location = new System.Drawing.Point(435, 291);
+            this.lbRobotHitBlobs.Name = "lbRobotHitBlobs";
+            this.lbRobotHitBlobs.Size = new System.Drawing.Size(100, 13);
+            this.lbRobotHitBlobs.TabIndex = 224;
+            this.lbRobotHitBlobs.Text = "Energy blobs on hit:";
             // 
             // txtRobotEnergyDrain
             // 
@@ -505,23 +505,23 @@
             this.txtRobotBadass.Tag = "DeathExplosionRadius";
             this.txtRobotBadass.TextChanged += new System.EventHandler(this.RobotProperty_TextChanged);
             // 
-            // label20
+            // lbRobotBadass
             // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(4, 272);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(84, 13);
-            this.label20.TabIndex = 221;
-            this.label20.Text = "Explode Radius:";
+            this.lbRobotBadass.AutoSize = true;
+            this.lbRobotBadass.Location = new System.Drawing.Point(4, 272);
+            this.lbRobotBadass.Name = "lbRobotBadass";
+            this.lbRobotBadass.Size = new System.Drawing.Size(84, 13);
+            this.lbRobotBadass.TabIndex = 221;
+            this.lbRobotBadass.Text = "Explode Radius:";
             // 
-            // label19
+            // lbRobotEnergyDrain
             // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(435, 317);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(116, 13);
-            this.label19.TabIndex = 220;
-            this.label19.Text = "Energy Drain on touch:";
+            this.lbRobotEnergyDrain.AutoSize = true;
+            this.lbRobotEnergyDrain.Location = new System.Drawing.Point(435, 317);
+            this.lbRobotEnergyDrain.Name = "lbRobotEnergyDrain";
+            this.lbRobotEnergyDrain.Size = new System.Drawing.Size(116, 13);
+            this.lbRobotEnergyDrain.TabIndex = 220;
+            this.lbRobotEnergyDrain.Text = "Energy Drain on touch:";
             // 
             // label7
             // 
@@ -545,14 +545,14 @@
             this.RobotDropTypeComboBox.TabIndex = 218;
             this.RobotDropTypeComboBox.SelectedIndexChanged += new System.EventHandler(this.RobotDropType_SelectedIndexChanged);
             // 
-            // label134
+            // lbRobotTauntSound
             // 
-            this.label134.AutoSize = true;
-            this.label134.Location = new System.Drawing.Point(3, 478);
-            this.label134.Name = "label134";
-            this.label134.Size = new System.Drawing.Size(70, 13);
-            this.label134.TabIndex = 217;
-            this.label134.Text = "Taunt sound:";
+            this.lbRobotTauntSound.AutoSize = true;
+            this.lbRobotTauntSound.Location = new System.Drawing.Point(3, 478);
+            this.lbRobotTauntSound.Name = "lbRobotTauntSound";
+            this.lbRobotTauntSound.Size = new System.Drawing.Size(70, 13);
+            this.lbRobotTauntSound.TabIndex = 217;
+            this.lbRobotTauntSound.Text = "Taunt sound:";
             // 
             // txtRobotLight
             // 
@@ -617,14 +617,14 @@
             this.txtRobotDrops.Tag = "ContainsCount";
             this.txtRobotDrops.TextChanged += new System.EventHandler(this.RobotProperty_TextChanged);
             // 
-            // label133
+            // lbRobotWeapon2
             // 
-            this.label133.AutoSize = true;
-            this.label133.Location = new System.Drawing.Point(4, 219);
-            this.label133.Name = "label133";
-            this.label133.Size = new System.Drawing.Size(50, 13);
-            this.label133.TabIndex = 216;
-            this.label133.Text = "Attack 2:";
+            this.lbRobotWeapon2.AutoSize = true;
+            this.lbRobotWeapon2.Location = new System.Drawing.Point(4, 219);
+            this.lbRobotWeapon2.Name = "lbRobotWeapon2";
+            this.lbRobotWeapon2.Size = new System.Drawing.Size(50, 13);
+            this.lbRobotWeapon2.TabIndex = 216;
+            this.lbRobotWeapon2.Text = "Attack 2:";
             // 
             // groupBox20
             // 
@@ -730,7 +730,7 @@
             this.groupBox18.Controls.Add(this.RobotTurnTime1);
             this.groupBox18.Controls.Add(this.RobotFireDelay1);
             this.groupBox18.Controls.Add(this.RobotFOV1);
-            this.groupBox18.Controls.Add(this.label145);
+            this.groupBox18.Controls.Add(this.lbRobotFireDelay2);
             this.groupBox18.Controls.Add(this.txtRobotFireDelay2);
             this.groupBox18.Controls.Add(this.label28);
             this.groupBox18.Controls.Add(this.label39);
@@ -1041,14 +1041,14 @@
             this.RobotFOV1.Tag = "FieldOfView,1";
             this.RobotFOV1.TextChanged += new System.EventHandler(this.AIFixedProperty_TextChanged);
             // 
-            // label145
+            // lbRobotFireDelay2
             // 
-            this.label145.AutoSize = true;
-            this.label145.Location = new System.Drawing.Point(8, 68);
-            this.label145.Name = "label145";
-            this.label145.Size = new System.Drawing.Size(116, 13);
-            this.label145.TabIndex = 57;
-            this.label145.Text = "Alternate Attack Delay:";
+            this.lbRobotFireDelay2.AutoSize = true;
+            this.lbRobotFireDelay2.Location = new System.Drawing.Point(8, 68);
+            this.lbRobotFireDelay2.Name = "lbRobotFireDelay2";
+            this.lbRobotFireDelay2.Size = new System.Drawing.Size(116, 13);
+            this.lbRobotFireDelay2.TabIndex = 57;
+            this.lbRobotFireDelay2.Text = "Alternate Attack Delay:";
             // 
             // txtRobotFireDelay2
             // 
@@ -1469,7 +1469,7 @@
             this.Controls.Add(this.HXMGroupBox);
             this.Controls.Add(this.RobotModelComboBox);
             this.Controls.Add(this.cbRobotDeathSound);
-            this.Controls.Add(this.label47);
+            this.Controls.Add(this.lbRobotDeathSound);
             this.Controls.Add(this.cbRobotHitSound);
             this.Controls.Add(this.label46);
             this.Controls.Add(this.RobotDeathVClipComboBox);
@@ -1483,29 +1483,29 @@
             this.Controls.Add(this.cbRobotAttackSound);
             this.Controls.Add(this.cbRobotSeeSound);
             this.Controls.Add(this.cbRobotAI);
-            this.Controls.Add(this.label112);
+            this.Controls.Add(this.lbRobotAI);
             this.Controls.Add(this.txtRobotGlow);
-            this.Controls.Add(this.label101);
-            this.Controls.Add(this.label100);
+            this.Controls.Add(this.lbRobotGlow);
+            this.Controls.Add(this.lbRobotDyingSound);
             this.Controls.Add(this.txtRobotLightcast);
-            this.Controls.Add(this.label99);
+            this.Controls.Add(this.lbRobotLightcast);
             this.Controls.Add(this.txtRobotPursuit);
-            this.Controls.Add(this.label98);
+            this.Controls.Add(this.lbRobotPursuit);
             this.Controls.Add(this.txtRobotAim);
-            this.Controls.Add(this.label97);
+            this.Controls.Add(this.lbRobotAim);
             this.Controls.Add(this.txtRobotDeathRolls);
-            this.Controls.Add(this.label96);
+            this.Controls.Add(this.lbRobotDeathRolls);
             this.Controls.Add(this.txtRobotDeathBlobs);
-            this.Controls.Add(this.label35);
+            this.Controls.Add(this.lbRobotDeathBlobs);
             this.Controls.Add(this.txtRobotHitBlobs);
-            this.Controls.Add(this.label34);
+            this.Controls.Add(this.lbRobotHitBlobs);
             this.Controls.Add(this.txtRobotEnergyDrain);
             this.Controls.Add(this.txtRobotBadass);
-            this.Controls.Add(this.label20);
-            this.Controls.Add(this.label19);
+            this.Controls.Add(this.lbRobotBadass);
+            this.Controls.Add(this.lbRobotEnergyDrain);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.RobotDropTypeComboBox);
-            this.Controls.Add(this.label134);
+            this.Controls.Add(this.lbRobotTauntSound);
             this.Controls.Add(this.txtRobotLight);
             this.Controls.Add(this.txtRobotDrag);
             this.Controls.Add(this.txtRobotMass);
@@ -1513,7 +1513,7 @@
             this.Controls.Add(this.txtRobotScore);
             this.Controls.Add(this.txtRobotDropProb);
             this.Controls.Add(this.txtRobotDrops);
-            this.Controls.Add(this.label133);
+            this.Controls.Add(this.lbRobotWeapon2);
             this.Controls.Add(this.groupBox20);
             this.Controls.Add(this.label95);
             this.Controls.Add(this.groupBox18);
@@ -1554,7 +1554,7 @@
 
         private System.Windows.Forms.ComboBox RobotModelComboBox;
         private System.Windows.Forms.ComboBox cbRobotDeathSound;
-        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.Label lbRobotDeathSound;
         private System.Windows.Forms.ComboBox cbRobotHitSound;
         private System.Windows.Forms.Label label46;
         private System.Windows.Forms.ComboBox RobotDeathVClipComboBox;
@@ -1568,29 +1568,29 @@
         private System.Windows.Forms.ComboBox cbRobotAttackSound;
         private System.Windows.Forms.ComboBox cbRobotSeeSound;
         private System.Windows.Forms.ComboBox cbRobotAI;
-        private System.Windows.Forms.Label label112;
+        private System.Windows.Forms.Label lbRobotAI;
         private System.Windows.Forms.TextBox txtRobotGlow;
-        private System.Windows.Forms.Label label101;
-        private System.Windows.Forms.Label label100;
+        private System.Windows.Forms.Label lbRobotGlow;
+        private System.Windows.Forms.Label lbRobotDyingSound;
         private System.Windows.Forms.TextBox txtRobotLightcast;
-        private System.Windows.Forms.Label label99;
+        private System.Windows.Forms.Label lbRobotLightcast;
         private System.Windows.Forms.TextBox txtRobotPursuit;
-        private System.Windows.Forms.Label label98;
+        private System.Windows.Forms.Label lbRobotPursuit;
         private System.Windows.Forms.TextBox txtRobotAim;
-        private System.Windows.Forms.Label label97;
+        private System.Windows.Forms.Label lbRobotAim;
         private System.Windows.Forms.TextBox txtRobotDeathRolls;
-        private System.Windows.Forms.Label label96;
+        private System.Windows.Forms.Label lbRobotDeathRolls;
         private System.Windows.Forms.TextBox txtRobotDeathBlobs;
-        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Label lbRobotDeathBlobs;
         private System.Windows.Forms.TextBox txtRobotHitBlobs;
-        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label lbRobotHitBlobs;
         private System.Windows.Forms.TextBox txtRobotEnergyDrain;
         private System.Windows.Forms.TextBox txtRobotBadass;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label lbRobotBadass;
+        private System.Windows.Forms.Label lbRobotEnergyDrain;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox RobotDropTypeComboBox;
-        private System.Windows.Forms.Label label134;
+        private System.Windows.Forms.Label lbRobotTauntSound;
         private System.Windows.Forms.TextBox txtRobotLight;
         private System.Windows.Forms.TextBox txtRobotDrag;
         private System.Windows.Forms.TextBox txtRobotMass;
@@ -1598,7 +1598,7 @@
         private System.Windows.Forms.TextBox txtRobotScore;
         private System.Windows.Forms.TextBox txtRobotDropProb;
         private System.Windows.Forms.TextBox txtRobotDrops;
-        private System.Windows.Forms.Label label133;
+        private System.Windows.Forms.Label lbRobotWeapon2;
         private System.Windows.Forms.GroupBox groupBox20;
         private System.Windows.Forms.CheckBox cbKamikaze;
         private System.Windows.Forms.CheckBox cbRobotThief;
@@ -1606,7 +1606,7 @@
         private System.Windows.Forms.CheckBox cbRobotClaw;
         private System.Windows.Forms.Label label95;
         private System.Windows.Forms.GroupBox groupBox18;
-        private System.Windows.Forms.Label label145;
+        private System.Windows.Forms.Label lbRobotFireDelay2;
         private System.Windows.Forms.TextBox txtRobotFireDelay2;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label39;

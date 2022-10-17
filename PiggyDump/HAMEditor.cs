@@ -40,7 +40,7 @@ namespace Descent2Workshop
         public EditorHAMFile datafile { get; }
         private StandardUI host;
         private Palette palette;
-        private PIGFile piggyFile;
+        private IImageProvider piggyFile;
         private TransactionManager transactionManager = new TransactionManager();
 
         private int ElementNumber { get { return (int)ElementSpinner.Value; } }
@@ -64,7 +64,7 @@ namespace Descent2Workshop
         private bool isLocked = false;
         private bool editedName = false;
 
-        public HAMEditor(EditorHAMFile data, StandardUI host, PIGFile piggyFile, Palette palette, SaveHandler saveHandler)
+        public HAMEditor(EditorHAMFile data, StandardUI host, IImageProvider piggyFile, Palette palette, SaveHandler saveHandler)
         {
             InitializeComponent();
 
@@ -176,6 +176,10 @@ namespace Descent2Workshop
                     break;
                 case 11:
                     SetElementControl(false, false);
+                    lbGagueHires.Visible = !IsD1();
+                    btnRemapGaugeHires.Visible = !IsD1();
+                    pbGagueHires.Visible = !IsD1();
+                    txtGagueHires.Visible = !IsD1();
                     break;
                 case 12:
                     SetElementControl(true, false);
@@ -418,6 +422,11 @@ namespace Descent2Workshop
             datafile.UpdateName(typeTable[EditorTabs.SelectedIndex], ElementNumber, txtElemName.Text);
         }
 
+        private bool IsD1()
+        {
+            return datafile.BaseFile is Descent1PIGFile;
+        }
+
         //---------------------------------------------------------------------
         // PANEL INITALIZATION
         // The contents of these boxes can change if the amount of elements is changed,
@@ -427,7 +436,7 @@ namespace Descent2Workshop
         private void InitTexturePanel()
         {
             SetElementControl(true, false);
-            texturePanel.Init(datafile.EClips, palette);
+            texturePanel.Init(datafile.EClips, palette, IsD1());
         }
 
         private void InitVClipPanel()
@@ -451,13 +460,13 @@ namespace Descent2Workshop
         private void InitWeaponPanel()
         {
             SetElementControl(true, true);
-            weaponPanel.Init(datafile.SoundNames, datafile.VClips, datafile.Weapons, datafile.Models, piggyFile, palette);
+            weaponPanel.Init(datafile.SoundNames, datafile.VClips, datafile.Weapons, datafile.Models, piggyFile, palette, IsD1());
         }
 
         private void InitRobotPanel()
         {
             SetElementControl(true, true);
-            robotPanel.Init(datafile.VClips, datafile.SoundNames, datafile.Robots, datafile.Weapons, datafile.Powerups, datafile.Models);
+            robotPanel.Init(datafile.VClips, datafile.SoundNames, datafile.Robots, datafile.Weapons, datafile.Powerups, datafile.Models, IsD1());
         }
 
         private void InitSoundPanel()
@@ -962,7 +971,10 @@ namespace Descent2Workshop
 
         private void mnuSaveAs_Click(object sender, EventArgs e)
         {
-            saveFileDialog1.Filter = "HAM Files|*.HAM";
+            if (datafile.BaseFile is Descent1PIGFile)
+                saveFileDialog1.Filter = "PIG Files|*.PIG";
+            else
+                saveFileDialog1.Filter = "HAM Files|*.HAM";
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 bool compatObjBitmaps = (StandardUI.options.GetOption("CompatObjBitmaps", bool.FalseString) == bool.TrueString);

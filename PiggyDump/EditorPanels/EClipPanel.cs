@@ -32,7 +32,7 @@ namespace Descent2Workshop.EditorPanels
     public partial class EClipPanel : UserControl
     {
         private EClip clip;
-        private PIGFile piggyFile;
+        private IImageProvider piggyFile;
         private Palette palette;
         private bool isLocked = false;
         private int eclipID;
@@ -77,7 +77,7 @@ namespace Descent2Workshop.EditorPanels
             cbEClipBreakEClip.Items[eclipID + 1] = newname;
         }
 
-        public void Update(int number, EClip clip, PIGFile piggyFile)
+        public void Update(int number, EClip clip, IImageProvider piggyFile)
         {
             isLocked = true;
             eclipID = number;

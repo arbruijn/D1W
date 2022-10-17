@@ -57,7 +57,7 @@ namespace Descent2Workshop.EditorPanels
             this.transactionManager = transactionManager;
         }
 
-        public void Init(List<VClip> VClips, List<string> SoundNames, List<Robot> Robots, List<Weapon> Weapons, List<Powerup> Powerups, List<Polymodel> Models)
+        public void Init(List<VClip> VClips, List<string> SoundNames, List<Robot> Robots, List<Weapon> Weapons, List<Powerup> Powerups, List<Polymodel> Models, bool d1)
         {
             RobotNames = new string[Robots.Count];
             for (int i = 0; i < Robots.Count; i++)
@@ -106,6 +106,40 @@ namespace Descent2Workshop.EditorPanels
             for (int i = 0; i < Models.Count; i++)
                 stringarray[i] = Models[i].Name;
             RobotModelComboBox.Items.AddRange(stringarray);
+
+            cbRobotWeapon2.Visible = !d1;
+            cbKamikaze.Visible = !d1;
+            txtRobotBadass.Visible = !d1;
+            txtRobotEnergyDrain.Visible = !d1;
+            cbRobotCompanion.Visible = !d1;
+            txtRobotHitBlobs.Visible = !d1;
+            txtRobotDeathBlobs.Visible = !d1;
+            txtRobotPursuit.Visible = !d1;
+            cbRobotThief.Visible = !d1;
+            txtRobotLightcast.Visible = !d1;
+            txtRobotDeathRolls.Visible = !d1;
+            cbRobotTauntSound.Visible = !d1;
+            cbRobotDyingSound.Visible = !d1;
+            txtRobotGlow.Visible = !d1;
+            cbRobotAI.Visible = !d1;
+            txtRobotAim.Visible = !d1;
+
+            lbRobotWeapon2.Visible = !d1;
+            lbRobotBadass.Visible = !d1;
+            lbRobotEnergyDrain.Visible = !d1;
+            lbRobotHitBlobs.Visible = !d1;
+            lbRobotDeathBlobs.Visible = !d1;
+            lbRobotPursuit.Visible = !d1;
+            lbRobotLightcast.Visible = !d1;
+            lbRobotDeathRolls.Visible = !d1;
+            lbRobotTauntSound.Visible = !d1;
+            lbRobotDyingSound.Visible = !d1;
+            lbRobotGlow.Visible = !d1;
+            lbRobotAI.Visible = !d1;
+            lbRobotAim.Visible = !d1;
+            lbRobotFireDelay2.Visible = !d1;
+            for (int i = 0; i < 5; i++)
+                FireWait2Controls[i].Visible = !d1;
         }
 
         public void Init(List<VClip> VClips, List<string> SoundNames, string[] RobotNames, string[] WeaponNames, List<Powerup> Powerups, string[] ModelNames)

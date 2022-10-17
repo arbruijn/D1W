@@ -44,10 +44,10 @@ namespace Descent2Workshop.Transactions
         private int newValue;
         private int index;
         private EditorHAMFile datafile;
-        private PIGFile pigfile;
+        private IImageProvider pigfile;
 
         public EventHandler<TmapInfoEventArgs> eventHandler;
-        public TMapInfoTransaction(string label, int page, int tab, EditorHAMFile datafile, PIGFile pigfile, int index, int newtexture) : base(label, null, "", page, tab)
+        public TMapInfoTransaction(string label, int page, int tab, EditorHAMFile datafile, IImageProvider pigfile, int index, int newtexture) : base(label, null, "", page, tab)
         {
             newValue = Math.Max(0, Math.Min(pigfile.Bitmaps.Count-1, newtexture));
             this.index = index;

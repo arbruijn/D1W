@@ -32,7 +32,7 @@ namespace Descent2Workshop
 {
     public partial class PIGEditor : Form
     {
-        public PIGFile datafile;
+        public IImageDataFile datafile;
         private Palette palette;
         private string filename;
         public StandardUI host;
@@ -40,7 +40,7 @@ namespace Descent2Workshop
 
         private ImageEditorPanel panel;
 
-        public PIGEditor(PIGFile data, Palette palette, string filename)
+        public PIGEditor(IImageDataFile data, Palette palette, string filename)
         {
             datafile = data;
             this.filename = filename;

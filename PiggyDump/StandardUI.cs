@@ -33,14 +33,14 @@ namespace Descent2Workshop
     public partial class StandardUI : Form
     {
         private EditorHOGFile defaultHogFile;
-        private PIGFile defaultPigFile;
-        private SNDFile defaultSoundFile;
+        private Descent1PIGFile defaultPigFile;
+        //private ISoundProvider defaultSoundFile;
         public static UserOptions options = new UserOptions();
 
         public bool readyForUse = false;
 
-        public SNDFile DefaultSoundFile { get => defaultSoundFile; }
-        public PIGFile DefaultPigFile { get => defaultPigFile; }
+        public ISoundProvider DefaultSoundFile { get => defaultPigFile; }
+        public Descent1PIGFile DefaultPigFile { get => defaultPigFile; }
         public Palette DefaultPalette { get; private set; }
 
         public StandardUI()
@@ -52,7 +52,7 @@ namespace Descent2Workshop
 
             string defaultHOG = options.GetOption("HOGFile", "");
             string defaultPIG = options.GetOption("PIGFile", "");
-            string defaultSound = options.GetOption("SNDFile", "");
+            //string defaultSound = options.GetOption("SNDFile", "");
             if (defaultHOG != "")
             {
                 defaultHogFile = LoadDefaultHOG(defaultHOG);
@@ -66,17 +66,19 @@ namespace Descent2Workshop
                 }
             }
 
+            #if false
             if (defaultSound != "")
             {
                 defaultSoundFile = LoadDefaultSND(defaultSound);
             }
+            #endif
 
             readyForUse = CheckReadyForUse();
 
             if (!readyForUse)
             {
-                MessageBox.Show("It seems you haven't configured your default .HOG, .PIG, and .SXX files yet." +
-                    "\nThis must be done before you can use D2 Workshop" +
+                MessageBox.Show("It seems you haven't configured your default .HOG and .PIG files yet." +
+                    "\nThis must be done before you can use D1W" +
                     "\nYou can do this in the Options menu");
             }
             //GraphicsContext.ShareContexts = false;
@@ -122,14 +124,14 @@ namespace Descent2Workshop
             openFileDialog1.Filter = ".PIG files|*.PIG";
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                string paletteName = Path.GetFileNameWithoutExtension(openFileDialog1.FileName) + ".256";
+                string paletteName = "palette.256"; // Path.GetFileNameWithoutExtension(openFileDialog1.FileName) + ".256";
                 Palette newPalette; int lumpIndex;
 
                 lumpIndex = defaultHogFile.GetLumpNum(paletteName);
                 if (lumpIndex != -1) newPalette = new Palette(defaultHogFile.GetLumpData(lumpIndex));
                 else newPalette = new Palette(); //If the palette couldn't be located, make a default grayscale palette
 
-                PIGFile archive = new PIGFile();
+                Descent1PIGFile archive = new Descent1PIGFile();
                 string statusMsg;
                 if (FileUtilities.LoadDataFile(openFileDialog1.FileName, archive, out statusMsg))
                 {
@@ -225,10 +227,10 @@ namespace Descent2Workshop
 
         private void menuItem4_Click(object sender, EventArgs e)
         {
-            openFileDialog1.Filter = ".HAM files|*.HAM";
+            openFileDialog1.Filter = ".PIG files|*.PIG";
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                EditorHAMFile archive = new EditorHAMFile(defaultPigFile);
+                EditorHAMFile archive = new EditorHAMFile(new Descent1PIGFile(), defaultPigFile);
                 if (LoadHAMFile(openFileDialog1.FileName, archive))
                 {
                     HAMEditor archiveEditor = new HAMEditor(archive, this, defaultPigFile, DefaultPalette, new FileSaveHandler(openFileDialog1.FileName));
@@ -258,7 +260,7 @@ namespace Descent2Workshop
             }
         }
 
-        private void NewHXMFileMenu_Click(object sender, EventArgs e)
+        private void NewFileMenu_Click(object sender, EventArgs e)
         {
             openFileDialog1.Filter = ".HAM files|*.HAM";
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
@@ -276,11 +278,11 @@ namespace Descent2Workshop
 
         private void menuItem24_Click(object sender, EventArgs e)
         {
-            openFileDialog1.Filter = ".S** files|*.S22;*.S11";
+            openFileDialog1.Filter = ".PIG files|*.PIG";
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 bool closeOnExit = true;
-                SNDFile archive;
+                Descent1PIGFile archive;
 
                 //Retaining this will be useful later, in case the default sound fiel changes.
                 /*if (defaultSoundFile != null && Path.GetFullPath(openFileDialog1.FileName) == Path.GetFullPath(options.GetOption("SNDFile", "")))
@@ -289,16 +291,16 @@ namespace Descent2Workshop
                     archive = defaultSoundFile;
                     closeOnExit = false;
                 }*/
-                archive = new SNDFile();
+                archive = new Descent1PIGFile();
 
                 FileStream newSoundStream = File.OpenRead(openFileDialog1.FileName);
                 archive.Read(newSoundStream);
                 //TODO: Not strictly needed for now, but will be when it's possible to play out of the default SND file.
-                SoundCache cache = SoundCache.CreateCacheFromFile(archive);
+                SoundCache cache = SoundCache.CreateCacheFromData(archive);
                 newSoundStream.Close();
 
                 SXXEditor archiveEditor = new SXXEditor(this, archive, cache, openFileDialog1.FileName);
-                if (Path.GetExtension(openFileDialog1.FileName).Equals(".S11", StringComparison.OrdinalIgnoreCase) ||
+                if (Path.GetExtension(openFileDialog1.FileName).Equals(".PIG", StringComparison.OrdinalIgnoreCase) ||
                     Path.GetExtension(openFileDialog1.FileName).Equals(".HAM", StringComparison.OrdinalIgnoreCase))
                 {
                     archiveEditor.isLowFi = true;
@@ -308,6 +310,7 @@ namespace Descent2Workshop
             }
         }
 
+#if false
         private void menuItem25_Click(object sender, EventArgs e)
         {
             openFileDialog1.Filter = ".S** files|*.S22;*.S11";
@@ -324,6 +327,7 @@ namespace Descent2Workshop
                 LoadDefaultSND(openFileDialog1.FileName);
             }
         }
+#endif
 
         private void OptionsMenu_Click(object sender, EventArgs e)
         {
@@ -332,7 +336,7 @@ namespace Descent2Workshop
             {
                 options.SetOption("HOGFile", config.HogFilename);
                 options.SetOption("PIGFile", config.PigFilename);
-                options.SetOption("SNDFile", config.SndFilename);
+                //options.SetOption("SNDFile", config.SndFilename);
                 options.SetOption("CompatObjBitmaps", config.NoPMView.ToString());
                 options.SetOption("TraceModels", config.Traces.ToString());
                 options.SetOption("TraceDir", config.TraceDir);
@@ -343,7 +347,7 @@ namespace Descent2Workshop
                     defaultPigFile = LoadDefaultPig(config.PigFilename, defaultHogFile);
                 else
                     AppendConsole("Could not load default PIG, since the default HOG is not loaded");
-                defaultSoundFile = LoadDefaultSND(config.SndFilename);
+                //defaultSoundFile = LoadDefaultSND(config.SndFilename);
             }
         }
 
@@ -397,7 +401,7 @@ namespace Descent2Workshop
             sw.Close();*/
 
 #else
-            AppendConsole("Descent II Workshop by ISB... heh\n");
+            AppendConsole("D1W is based on Descent II Workshop by ISB... heh\n");
 #endif
         }
 
@@ -439,9 +443,9 @@ namespace Descent2Workshop
             return defaultHOG;
         }
 
-        private PIGFile LoadDefaultPig(string filename, EditorHOGFile hogFile)
+        private Descent1PIGFile LoadDefaultPig(string filename, EditorHOGFile hogFile)
         {
-            string paletteName = Path.GetFileNameWithoutExtension(filename) + ".256";
+            string paletteName = "palette.256"; // Path.GetFileNameWithoutExtension(filename) + ".256";
             Palette newPalette; int lumpIndex;
 
             lumpIndex = defaultHogFile.GetLumpNum(paletteName);
@@ -449,7 +453,7 @@ namespace Descent2Workshop
             else newPalette = new Palette(); //If the palette couldn't be located, make a default grayscale palette
             DefaultPalette = newPalette;
 
-            PIGFile defaultPIG = new PIGFile();
+            Descent1PIGFile defaultPIG = new Descent1PIGFile();
             try
             {
                 /*defaultPIG.Read(filename);
@@ -476,6 +480,7 @@ namespace Descent2Workshop
             return defaultPIG;
         }
 
+#if false
         private SNDFile LoadDefaultSND(string filename)
         {
             SNDFile defaultSND = new SNDFile();
@@ -508,6 +513,7 @@ namespace Descent2Workshop
             }
             return defaultSND;
         }
+#endif
 
         private void FileExceptionHandler(Exception error, string context)
         {
@@ -527,7 +533,7 @@ namespace Descent2Workshop
 
         private bool CheckReadyForUse()
         {
-            return (defaultHogFile != null) && (defaultPigFile != null) && (defaultSoundFile != null);
+            return (defaultHogFile != null) && (defaultPigFile != null); // && (defaultSoundFile != null);
         }
 
         private void OpenHXMMenu_Click(object sender, EventArgs e)

@@ -39,7 +39,7 @@ namespace Descent2Workshop
 {
     public partial class SXXEditor : Form
     {
-        public SNDFile datafile;
+        public ISoundDataFile datafile;
         public StandardUI host;
         public bool isLowFi = false;
         public bool closeOnExit = true;
@@ -48,7 +48,7 @@ namespace Descent2Workshop
         private string fileName;
 
         private SaveHandler saveHandler;
-        public SXXEditor(StandardUI host, SNDFile datafile, SoundCache cache, string FileName)
+        public SXXEditor(StandardUI host, ISoundDataFile datafile, SoundCache cache, string FileName)
         {
             InitializeComponent();
             this.datafile = datafile;
@@ -225,7 +225,9 @@ namespace Descent2Workshop
 
         private void SaveAsMenu_Click(object sender, EventArgs e)
         {
-            if (isLowFi)
+            if (datafile is Descent1PIGFile)
+                saveFileDialog1.Filter = "PIG Files|*.pig";
+            else if (isLowFi)
                 saveFileDialog1.Filter = "S11 Files|*.s11";
             else
                 saveFileDialog1.Filter = "S22 Files|*.s22";

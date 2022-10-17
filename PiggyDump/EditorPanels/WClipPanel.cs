@@ -40,7 +40,7 @@ namespace Descent2Workshop.EditorPanels
         private WClip clip;
         private int wclipID;
         private EditorHAMFile hamFile;
-        private PIGFile piggyFile;
+        private IImageProvider piggyFile;
         private Palette palette;
         private bool isLocked = false;
         private TransactionManager transactionManager;
@@ -62,7 +62,7 @@ namespace Descent2Workshop.EditorPanels
             CloseSoundComboBox.Items.AddRange(namelist);
         }
 
-        public void Update(int number, WClip clip, EditorHAMFile hamFile, PIGFile piggyFile, Palette palette)
+        public void Update(int number, WClip clip, EditorHAMFile hamFile, IImageProvider piggyFile, Palette palette)
         {
             isLocked = true;
             wclipID = number;

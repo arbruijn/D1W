@@ -58,7 +58,7 @@ namespace Descent2Workshop
             return id;
         }
 
-        public List<int> LoadPolymodelTextures(Polymodel model, PIGFile pigFile, Palette palette, EditorHAMFile hamFile)
+        public List<int> LoadPolymodelTextures(Polymodel model, IImageProvider pigFile, Palette palette, EditorHAMFile hamFile)
         {
             List<int> textureIDs = new List<int>();
             Bitmap image; EClip clip;
@@ -79,7 +79,7 @@ namespace Descent2Workshop
             return textureIDs;
         }
 
-        public List<int> LoadPolymodelTextures(Polymodel model, Palette palette, PIGFile pigFile)
+        public List<int> LoadPolymodelTextures(Polymodel model, Palette palette, IImageProvider pigFile)
         {
             List<int> textureIDs = new List<int>();
             Bitmap image;

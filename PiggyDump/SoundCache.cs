@@ -22,6 +22,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -62,15 +63,30 @@ namespace Descent2Workshop
         /// </summary>
         /// <param name="datafile">The datafile to load from. Must have a valid stream.</param>
         /// <returns>The sound cache with the sound data.</returns>
-        public static SoundCache CreateCacheFromFile(SNDFile datafile)
+        public static SoundCache CreateCacheFromFile(ISoundProvider datafile, Stream f, long ofs)
         {
             SoundCache cache = new SoundCache();
             for (int i = 0; i < datafile.Sounds.Count; i++)
             {
-                cache.CacheSound(datafile.LoadSound(i));
+                byte[] buf = new byte[datafile.Sounds[i].Length];
+                f.Position = ofs + datafile.Sounds[i].Offset;
+                f.Read(buf, 0, buf.Length);
+                cache.CacheSound(buf);
             }
 
             return cache;
         }
+
+        public static SoundCache CreateCacheFromData(ISoundProvider datafile)
+        {
+            SoundCache cache = new SoundCache();
+            for (int i = 0; i < datafile.Sounds.Count; i++)
+            {
+                cache.CacheSound(datafile.Sounds[i].Data);
+            }
+
+            return cache;
+        }
+
     }
 }

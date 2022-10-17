@@ -29,12 +29,12 @@ namespace Descent2Workshop.Transactions
 {
     public class ReplaceSoundTransaction : Transaction
     {
-        private SNDFile sndFile;
+        private ISoundProvider sndFile;
         private SoundCache cache;
         private int id;
         private string name;
         private byte[] data;
-        public ReplaceSoundTransaction(SNDFile sndFile, SoundCache cache, int id, string name, byte[] data) : base("Replace sound")
+        public ReplaceSoundTransaction(ISoundProvider sndFile, SoundCache cache, int id, string name, byte[] data) : base("Replace sound")
         {
             this.sndFile = sndFile;
             this.id = id;

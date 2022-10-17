@@ -11,13 +11,13 @@ namespace Descent2Workshop.Transactions
     public class VClipRemapTransaction : Transaction
     {
         private VClip clip;
-        private PIGFile piggyFile;
+        private IImageProvider piggyFile;
         private int frame;
 
         private ushort[] framebackup;
         private int oldframes;
         private Fix oldFrameTime;
-        public VClipRemapTransaction(string label, int page, int tab, VClip clip, PIGFile piggyFile, int clipFirstFrame) : base(label, clip, "", page, tab)
+        public VClipRemapTransaction(string label, int page, int tab, VClip clip, IImageProvider piggyFile, int clipFirstFrame) : base(label, clip, "", page, tab)
         {
             this.clip = clip;
             this.piggyFile = piggyFile;

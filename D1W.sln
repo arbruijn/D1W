@@ -1,15 +1,14 @@
-
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Descent II Workshop", "PiggyDump\Descent II Workshop.csproj", "{A9CC48AF-AEDF-4A2D-86A7-9288BADBC801}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D1W", "PiggyDump\D1W.csproj", "{A9CC48AF-AEDF-4A2D-86A7-9288BADBC801}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibDescent.Data", "LibDescent\Data\LibDescent.Data.csproj", "{B53C3F82-EAD0-46EC-BCB4-65CC38178E04}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibDescent.Edit", "LibDescent\Edit\LibDescent.Edit.csproj", "{FE0955CA-4C10-425E-9DFA-CBAFC18720A5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibDescent.Tests", "LibDescent\Tests\LibDescent.Tests.csproj", "{219221ED-18DA-4D96-AB4E-CB9A0192A2F4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibDescent.Tests", "LibDescent\Tests\LibDescent.Tests.csproj", "{219221ED-18DA-4D96-AB4E-CB9A0192A2F4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -36,5 +35,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3D414267-81DB-4031-80EE-2AE4F47DEC16}
 	EndGlobalSection
 EndGlobal

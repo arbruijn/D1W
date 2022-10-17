@@ -39,7 +39,7 @@ namespace Descent2Workshop.EditorPanels
         private int soundID;
         private bool isLocked = false;
 
-        public SoundPanel(TransactionManager transactionManager, int tabPage, EditorHAMFile datafile, SNDFile soundFile)
+        public SoundPanel(TransactionManager transactionManager, int tabPage, EditorHAMFile datafile, ISoundProvider soundFile)
         {
             InitializeComponent();
             this.transactionManager = transactionManager;

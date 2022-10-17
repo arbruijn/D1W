@@ -39,7 +39,7 @@ namespace Descent2Workshop.EditorPanels
     {
         //TMAPInfos can only be in HAM files, so it's safe to have this
         private EditorHAMFile datafile;
-        private PIGFile piggyFile;
+        private IImageProvider piggyFile;
         private Palette palette;
         private int textureID; //Needed to look up and set
         private TMAPInfo info;
@@ -53,7 +53,7 @@ namespace Descent2Workshop.EditorPanels
             this.transactionManager = transactionManager;
         }
 
-        public void Init(List<EClip> EClips, Palette palette)
+        public void Init(List<EClip> EClips, Palette palette, bool d1)
         {
             cbTexEClip.Items.Clear(); cbTexEClip.Items.Add("None");
 
@@ -62,6 +62,19 @@ namespace Descent2Workshop.EditorPanels
                 EClipNames[i] = EClips[i].Name;
             cbTexEClip.Items.AddRange(EClipNames);
             this.palette = palette;
+
+            txtTexSlideU.Visible = !d1;
+            txtTexSlideV.Visible = !d1;
+            TextureDestroyedTextBox.Visible = !d1;
+            cbTexWater.Visible = !d1;
+            cbTexForcefield.Visible = !d1;
+            cbTexRedGoal.Visible = !d1;
+            cbTexBlueGoal.Visible = !d1;
+            cbTexHoardGoal.Visible = !d1;
+
+            lbTexSlideU.Visible = !d1;
+            lbTexSlideV.Visible = !d1;
+            lbTextureDestroyed.Visible = !d1;
         }
 
         public double GetFloatFromFixed88(short fixedvalue)
@@ -80,7 +93,7 @@ namespace Descent2Workshop.EditorPanels
             pictureBox.Image = img;
         }
 
-        public void Update(EditorHAMFile datafile, PIGFile piggyFile, int textureID, TMAPInfo info)
+        public void Update(EditorHAMFile datafile, IImageProvider piggyFile, int textureID, TMAPInfo info)
         {
             isLocked = true;
             this.textureID = textureID;

@@ -71,7 +71,7 @@ namespace Descent2Workshop
             }
             foreach (ushort cockpit in pigfile.Cockpits)
                 file.Cockpits.Add(cockpit);
-            for (int i = 0; i < pigfile.ObjBitmaps.Length; i++)
+            for (int i = 0; i < pigfile.ObjBitmaps.Count; i++)
             {
                 file.ObjBitmaps.Add(pigfile.ObjBitmaps[i]);
                 file.ObjBitmapPointers.Add(pigfile.ObjBitmapPointers[i]);

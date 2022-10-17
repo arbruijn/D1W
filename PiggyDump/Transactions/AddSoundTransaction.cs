@@ -34,12 +34,12 @@ namespace Descent2Workshop.Transactions
     //honestly starting to think I should have named transactions "operations" or something
     public class AddSoundTransaction : Transaction
     {
-        private SNDFile sndFile;
+        private ISoundProvider sndFile;
         private SoundCache cache;
         private int id;
         private string name;
         private byte[] data;
-        public AddSoundTransaction(SNDFile sndFile, SoundCache cache, int id, string name, byte[] data) : base("Add sound")
+        public AddSoundTransaction(ISoundProvider sndFile, SoundCache cache, int id, string name, byte[] data) : base("Add sound")
         {
             this.sndFile = sndFile;
             this.id = id;

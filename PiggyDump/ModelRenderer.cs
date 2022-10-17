@@ -36,7 +36,7 @@ namespace Descent2Workshop
     {
         private int frame = -1;
         private Polymodel model;
-        private PIGFile piggyFile;
+        private IImageProvider piggyFile;
         private Palette palette;
         private EditorHAMFile dataFile;
         private List<int> textureList;
@@ -64,13 +64,13 @@ namespace Descent2Workshop
         public int Frame { get => frame; set => frame = value; }
         public bool EmulateSoftware { get => emulateSoftware; set => emulateSoftware = value; }
 
-        public ModelRenderer(PIGFile piggyFile, Palette palette)
+        public ModelRenderer(IImageProvider piggyFile, Palette palette)
         {
             this.piggyFile = piggyFile;
             this.palette = palette;
         }
 
-        public ModelRenderer(EditorHAMFile dataFile, PIGFile piggyFile, Palette palette)
+        public ModelRenderer(EditorHAMFile dataFile, IImageProvider piggyFile, Palette palette)
         {
             this.piggyFile = piggyFile;
             this.dataFile = dataFile;
@@ -377,9 +377,20 @@ namespace Descent2Workshop
 
                             //Draw
                             GL.Disable(EnableCap.Texture2D); //TODO: too many state changes
-                            int cr = ((color >> 10) & 31) * 255 / 31;
-                            int cg = ((color >> 5) & 31) * 255 / 31;
-                            int cb = (color & 31) * 255 / 31;
+
+                            int cr, cg, cb;
+                            if (piggyFile is Descent1PIGFile)
+                            {
+                                cr = palette[color].R;
+                                cg = palette[color].G;
+                                cb = palette[color].B;
+                            }
+                            else
+                            {
+                                cr = ((color >> 10) & 31) * 255 / 31;
+                                cg = ((color >> 5) & 31) * 255 / 31;
+                                cb = (color & 31) * 255 / 31;
+                            }
 
                             if (wireframe)
                                 GL.Begin(PrimitiveType.LineLoop);

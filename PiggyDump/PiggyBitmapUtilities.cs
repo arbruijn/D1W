@@ -119,9 +119,34 @@ namespace Descent2Workshop
             return bitmap;
         }
 
-        public static Bitmap GetBitmap(PIGFile piggyFile, Palette palette, string name)
+        public static PIGImage GetImage(IImageProvider piggyFile, string name)
         {
-            PIGImage image = piggyFile.GetImage(name);
+            var Bitmaps = piggyFile.Bitmaps;
+            for (int x = 0; x < Bitmaps.Count; x++)
+            {
+                //todo: Dictionary
+                if (Bitmaps[x].Name.Equals(name, StringComparison.OrdinalIgnoreCase))
+                {
+                    return Bitmaps[x];
+                }
+            }
+            return Bitmaps[0];
+        }
+        public static int GetBitmapIDFromName(IImageProvider piggyFile, string name)
+        {
+            var Bitmaps = piggyFile.Bitmaps;
+            for (int x = 0; x < Bitmaps.Count; x++)
+            {
+                if (Bitmaps[x].Name.Equals(name, StringComparison.OrdinalIgnoreCase))
+                {
+                    return x;
+                }
+            }
+            return 0;
+        }
+        public static Bitmap GetBitmap(IImageProvider piggyFile, Palette palette, string name)
+        {
+            PIGImage image = GetImage(piggyFile, name);
             Bitmap bitmap = new Bitmap(image.Width, image.Height);
             int[] rgbData = new int[image.Width * image.Height];
             byte[] rawData = image.GetData();

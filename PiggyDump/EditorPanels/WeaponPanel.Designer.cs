@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.cbWeaponBounce = new System.Windows.Forms.ComboBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.buWeaponCockpitImageh = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnRemapWeaponSprite = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -48,16 +48,16 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txtWeaponSpeedvar = new System.Windows.Forms.TextBox();
             this.cbWeaponPlacable = new System.Windows.Forms.CheckBox();
-            this.label142 = new System.Windows.Forms.Label();
+            this.lbWeaponCockpitImageh = new System.Windows.Forms.Label();
             this.txtWeaponCockpitImageh = new System.Windows.Forms.TextBox();
             this.txtWeaponMPScale = new System.Windows.Forms.TextBox();
-            this.label141 = new System.Windows.Forms.Label();
-            this.label140 = new System.Windows.Forms.Label();
+            this.lbWeaponMPScale = new System.Windows.Forms.Label();
+            this.lbWeaponChildren = new System.Windows.Forms.Label();
             this.txtWeaponABSize = new System.Windows.Forms.TextBox();
-            this.label139 = new System.Windows.Forms.Label();
+            this.lbWeaponABSize = new System.Windows.Forms.Label();
             this.txtWeaponBlindSize = new System.Windows.Forms.TextBox();
             this.label138 = new System.Windows.Forms.Label();
-            this.label137 = new System.Windows.Forms.Label();
+            this.lbWeaponSpeedvar = new System.Windows.Forms.Label();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.Damage4 = new System.Windows.Forms.TextBox();
             this.Speed4 = new System.Windows.Forms.TextBox();
@@ -93,7 +93,7 @@
             this.label58 = new System.Windows.Forms.Label();
             this.label59 = new System.Windows.Forms.Label();
             this.label60 = new System.Windows.Forms.Label();
-            this.label61 = new System.Windows.Forms.Label();
+            this.lbWeaponFlashSize = new System.Windows.Forms.Label();
             this.SpriteSizeLabel = new System.Windows.Forms.Label();
             this.label63 = new System.Windows.Forms.Label();
             this.label65 = new System.Windows.Forms.Label();
@@ -135,16 +135,16 @@
             this.cbWeaponBounce.Tag = "Bounce";
             this.cbWeaponBounce.SelectedIndexChanged += new System.EventHandler(this.WeaponComboBoxNormal_SelectedIndexChanged);
             // 
-            // button3
+            // buWeaponCockpitImageh
             // 
-            this.button3.Location = new System.Drawing.Point(473, 134);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(25, 23);
-            this.button3.TabIndex = 299;
-            this.button3.Tag = "2";
-            this.button3.Text = "...";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.RemapSingleImage_Click);
+            this.buWeaponCockpitImageh.Location = new System.Drawing.Point(473, 134);
+            this.buWeaponCockpitImageh.Name = "buWeaponCockpitImageh";
+            this.buWeaponCockpitImageh.Size = new System.Drawing.Size(25, 23);
+            this.buWeaponCockpitImageh.TabIndex = 299;
+            this.buWeaponCockpitImageh.Tag = "2";
+            this.buWeaponCockpitImageh.Text = "...";
+            this.buWeaponCockpitImageh.UseVisualStyleBackColor = true;
+            this.buWeaponCockpitImageh.Click += new System.EventHandler(this.RemapSingleImage_Click);
             // 
             // button1
             // 
@@ -395,14 +395,14 @@
             this.cbWeaponPlacable.UseVisualStyleBackColor = true;
             this.cbWeaponPlacable.CheckedChanged += new System.EventHandler(this.WeaponCheckBox_CheckChanged);
             // 
-            // label142
+            // lbWeaponCockpitImageh
             // 
-            this.label142.AutoSize = true;
-            this.label142.Location = new System.Drawing.Point(254, 139);
-            this.label142.Name = "label142";
-            this.label142.Size = new System.Drawing.Size(105, 13);
-            this.label142.TabIndex = 280;
-            this.label142.Text = "Hires Cockpit Image:";
+            this.lbWeaponCockpitImageh.AutoSize = true;
+            this.lbWeaponCockpitImageh.Location = new System.Drawing.Point(254, 139);
+            this.lbWeaponCockpitImageh.Name = "lbWeaponCockpitImageh";
+            this.lbWeaponCockpitImageh.Size = new System.Drawing.Size(105, 13);
+            this.lbWeaponCockpitImageh.TabIndex = 280;
+            this.lbWeaponCockpitImageh.Text = "Hires Cockpit Image:";
             // 
             // txtWeaponCockpitImageh
             // 
@@ -422,23 +422,23 @@
             this.txtWeaponMPScale.Tag = "MultiDamageScale";
             this.txtWeaponMPScale.TextChanged += new System.EventHandler(this.WeaponFixedProperty_TextChanged);
             // 
-            // label141
+            // lbWeaponMPScale
             // 
-            this.label141.AutoSize = true;
-            this.label141.Location = new System.Drawing.Point(13, 79);
-            this.label141.Name = "label141";
-            this.label141.Size = new System.Drawing.Size(99, 13);
-            this.label141.TabIndex = 277;
-            this.label141.Text = "MP Damage Scale:";
+            this.lbWeaponMPScale.AutoSize = true;
+            this.lbWeaponMPScale.Location = new System.Drawing.Point(13, 79);
+            this.lbWeaponMPScale.Name = "lbWeaponMPScale";
+            this.lbWeaponMPScale.Size = new System.Drawing.Size(99, 13);
+            this.lbWeaponMPScale.TabIndex = 277;
+            this.lbWeaponMPScale.Text = "MP Damage Scale:";
             // 
-            // label140
+            // lbWeaponChildren
             // 
-            this.label140.AutoSize = true;
-            this.label140.Location = new System.Drawing.Point(4, 300);
-            this.label140.Name = "label140";
-            this.label140.Size = new System.Drawing.Size(98, 13);
-            this.label140.TabIndex = 276;
-            this.label140.Text = "Children on Impact:";
+            this.lbWeaponChildren.AutoSize = true;
+            this.lbWeaponChildren.Location = new System.Drawing.Point(4, 300);
+            this.lbWeaponChildren.Name = "lbWeaponChildren";
+            this.lbWeaponChildren.Size = new System.Drawing.Size(98, 13);
+            this.lbWeaponChildren.TabIndex = 276;
+            this.lbWeaponChildren.Text = "Children on Impact:";
             // 
             // txtWeaponABSize
             // 
@@ -449,14 +449,14 @@
             this.txtWeaponABSize.Tag = "AfterburnerSize";
             this.txtWeaponABSize.TextChanged += new System.EventHandler(this.WeaponProperty_TextChanged);
             // 
-            // label139
+            // lbWeaponABSize
             // 
-            this.label139.AutoSize = true;
-            this.label139.Location = new System.Drawing.Point(254, 61);
-            this.label139.Name = "label139";
-            this.label139.Size = new System.Drawing.Size(53, 13);
-            this.label139.TabIndex = 274;
-            this.label139.Text = "Trail Size:";
+            this.lbWeaponABSize.AutoSize = true;
+            this.lbWeaponABSize.Location = new System.Drawing.Point(254, 61);
+            this.lbWeaponABSize.Name = "lbWeaponABSize";
+            this.lbWeaponABSize.Size = new System.Drawing.Size(53, 13);
+            this.lbWeaponABSize.TabIndex = 274;
+            this.lbWeaponABSize.Text = "Trail Size:";
             // 
             // txtWeaponBlindSize
             // 
@@ -476,14 +476,14 @@
             this.label138.TabIndex = 272;
             this.label138.Text = "Blinding Size:";
             // 
-            // label137
+            // lbWeaponSpeedvar
             // 
-            this.label137.AutoSize = true;
-            this.label137.Location = new System.Drawing.Point(495, 87);
-            this.label137.Name = "label137";
-            this.label137.Size = new System.Drawing.Size(86, 13);
-            this.label137.TabIndex = 271;
-            this.label137.Text = "Speed Variance:";
+            this.lbWeaponSpeedvar.AutoSize = true;
+            this.lbWeaponSpeedvar.Location = new System.Drawing.Point(495, 87);
+            this.lbWeaponSpeedvar.Name = "lbWeaponSpeedvar";
+            this.lbWeaponSpeedvar.Size = new System.Drawing.Size(86, 13);
+            this.lbWeaponSpeedvar.TabIndex = 271;
+            this.lbWeaponSpeedvar.Text = "Speed Variance:";
             // 
             // groupBox9
             // 
@@ -499,7 +499,7 @@
             this.groupBox9.Controls.Add(this.txtWeaponSpeed);
             this.groupBox9.Controls.Add(this.label51);
             this.groupBox9.Controls.Add(this.label52);
-            this.groupBox9.Controls.Add(this.label141);
+            this.groupBox9.Controls.Add(this.lbWeaponMPScale);
             this.groupBox9.Controls.Add(this.txtWeaponMPScale);
             this.groupBox9.Location = new System.Drawing.Point(7, 324);
             this.groupBox9.Name = "groupBox9";
@@ -814,14 +814,14 @@
             this.label60.TabIndex = 257;
             this.label60.Text = "Impact Size:";
             // 
-            // label61
+            // lbWeaponFlashSize
             // 
-            this.label61.AutoSize = true;
-            this.label61.Location = new System.Drawing.Point(254, 9);
-            this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(58, 13);
-            this.label61.TabIndex = 254;
-            this.label61.Text = "Flash Size:";
+            this.lbWeaponFlashSize.AutoSize = true;
+            this.lbWeaponFlashSize.Location = new System.Drawing.Point(254, 9);
+            this.lbWeaponFlashSize.Name = "lbWeaponFlashSize";
+            this.lbWeaponFlashSize.Size = new System.Drawing.Size(58, 13);
+            this.lbWeaponFlashSize.TabIndex = 254;
+            this.lbWeaponFlashSize.Text = "Flash Size:";
             // 
             // SpriteSizeLabel
             // 
@@ -1052,7 +1052,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.cbWeaponBounce);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.buWeaponCockpitImageh);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnRemapWeaponSprite);
             this.Controls.Add(this.button5);
@@ -1070,14 +1070,14 @@
             this.Controls.Add(this.txtWeaponExplosionSize);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtWeaponSpeedvar);
-            this.Controls.Add(this.label142);
+            this.Controls.Add(this.lbWeaponCockpitImageh);
             this.Controls.Add(this.txtWeaponCockpitImageh);
-            this.Controls.Add(this.label140);
+            this.Controls.Add(this.lbWeaponChildren);
             this.Controls.Add(this.txtWeaponABSize);
-            this.Controls.Add(this.label139);
+            this.Controls.Add(this.lbWeaponABSize);
             this.Controls.Add(this.txtWeaponBlindSize);
             this.Controls.Add(this.label138);
-            this.Controls.Add(this.label137);
+            this.Controls.Add(this.lbWeaponSpeedvar);
             this.Controls.Add(this.groupBox9);
             this.Controls.Add(this.label53);
             this.Controls.Add(this.txtWeaponCockpitImage);
@@ -1101,7 +1101,7 @@
             this.Controls.Add(this.label58);
             this.Controls.Add(this.label59);
             this.Controls.Add(this.label60);
-            this.Controls.Add(this.label61);
+            this.Controls.Add(this.lbWeaponFlashSize);
             this.Controls.Add(this.SpriteSizeLabel);
             this.Controls.Add(this.label63);
             this.Controls.Add(this.label65);
@@ -1133,7 +1133,7 @@
         #endregion
 
         private System.Windows.Forms.ComboBox cbWeaponBounce;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button buWeaponCockpitImageh;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnRemapWeaponSprite;
         private System.Windows.Forms.Button button5;
@@ -1152,16 +1152,16 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtWeaponSpeedvar;
         private System.Windows.Forms.CheckBox cbWeaponPlacable;
-        private System.Windows.Forms.Label label142;
+        private System.Windows.Forms.Label lbWeaponCockpitImageh;
         private System.Windows.Forms.TextBox txtWeaponCockpitImageh;
         private System.Windows.Forms.TextBox txtWeaponMPScale;
-        private System.Windows.Forms.Label label141;
-        private System.Windows.Forms.Label label140;
+        private System.Windows.Forms.Label lbWeaponMPScale;
+        private System.Windows.Forms.Label lbWeaponChildren;
         private System.Windows.Forms.TextBox txtWeaponABSize;
-        private System.Windows.Forms.Label label139;
+        private System.Windows.Forms.Label lbWeaponABSize;
         private System.Windows.Forms.TextBox txtWeaponBlindSize;
         private System.Windows.Forms.Label label138;
-        private System.Windows.Forms.Label label137;
+        private System.Windows.Forms.Label lbWeaponSpeedvar;
         private System.Windows.Forms.GroupBox groupBox9;
         private System.Windows.Forms.TextBox txtWeaponStr;
         private System.Windows.Forms.TextBox txtWeaponSpeed;
@@ -1189,7 +1189,7 @@
         private System.Windows.Forms.Label label58;
         private System.Windows.Forms.Label label59;
         private System.Windows.Forms.Label label60;
-        private System.Windows.Forms.Label label61;
+        private System.Windows.Forms.Label lbWeaponFlashSize;
         private System.Windows.Forms.Label SpriteSizeLabel;
         private System.Windows.Forms.Label label63;
         private System.Windows.Forms.Label label65;

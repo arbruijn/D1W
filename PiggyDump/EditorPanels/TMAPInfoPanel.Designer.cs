@@ -31,13 +31,13 @@
             this.btnRemapTexture = new System.Windows.Forms.Button();
             this.cbTexEClip = new System.Windows.Forms.ComboBox();
             this.TextureDestroyedTextBox = new System.Windows.Forms.TextBox();
-            this.label107 = new System.Windows.Forms.Label();
+            this.lbTextureDestroyed = new System.Windows.Forms.Label();
             this.txtTexSlideV = new System.Windows.Forms.TextBox();
             this.txtTexSlideU = new System.Windows.Forms.TextBox();
             this.txtTexDamage = new System.Windows.Forms.TextBox();
             this.txtTexLight = new System.Windows.Forms.TextBox();
             this.TextureIDTextBox = new System.Windows.Forms.TextBox();
-            this.label130 = new System.Windows.Forms.Label();
+            this.lbTexSlideV = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cbTexHoardGoal = new System.Windows.Forms.CheckBox();
             this.cbTexRedGoal = new System.Windows.Forms.CheckBox();
@@ -45,7 +45,7 @@
             this.cbTexForcefield = new System.Windows.Forms.CheckBox();
             this.cbTexWater = new System.Windows.Forms.CheckBox();
             this.cbTexLava = new System.Windows.Forms.CheckBox();
-            this.label12 = new System.Windows.Forms.Label();
+            this.lbTexSlideU = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -87,14 +87,14 @@
             this.TextureDestroyedTextBox.Tag = "DestroyedID";
             this.TextureDestroyedTextBox.TextChanged += new System.EventHandler(this.TextureIntegerProperty_TextChanged);
             // 
-            // label107
+            // lbTextureDestroyed
             // 
-            this.label107.AutoSize = true;
-            this.label107.Location = new System.Drawing.Point(1, 136);
-            this.label107.Name = "label107";
-            this.label107.Size = new System.Drawing.Size(72, 13);
-            this.label107.TabIndex = 61;
-            this.label107.Text = "Destroyed ID:";
+            this.lbTextureDestroyed.AutoSize = true;
+            this.lbTextureDestroyed.Location = new System.Drawing.Point(1, 136);
+            this.lbTextureDestroyed.Name = "lbTextureDestroyed";
+            this.lbTextureDestroyed.Size = new System.Drawing.Size(72, 13);
+            this.lbTextureDestroyed.TabIndex = 61;
+            this.lbTextureDestroyed.Text = "Destroyed ID:";
             // 
             // txtTexSlideV
             // 
@@ -141,14 +141,14 @@
             this.TextureIDTextBox.Tag = "0";
             this.TextureIDTextBox.TextChanged += new System.EventHandler(this.TextureIDTextBox_TextChanged);
             // 
-            // label130
+            // lbTexSlideV
             // 
-            this.label130.AutoSize = true;
-            this.label130.Location = new System.Drawing.Point(185, 110);
-            this.label130.Name = "label130";
-            this.label130.Size = new System.Drawing.Size(43, 13);
-            this.label130.TabIndex = 59;
-            this.label130.Text = "Slide V:";
+            this.lbTexSlideV.AutoSize = true;
+            this.lbTexSlideV.Location = new System.Drawing.Point(185, 110);
+            this.lbTexSlideV.Name = "lbTexSlideV";
+            this.lbTexSlideV.Size = new System.Drawing.Size(43, 13);
+            this.lbTexSlideV.TabIndex = 59;
+            this.lbTexSlideV.Text = "Slide V:";
             // 
             // groupBox1
             // 
@@ -237,14 +237,14 @@
             this.cbTexLava.UseVisualStyleBackColor = true;
             this.cbTexLava.CheckedChanged += new System.EventHandler(this.TextureFlagCheckbox_CheckedChanged);
             // 
-            // label12
+            // lbTexSlideU
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(29, 110);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(44, 13);
-            this.label12.TabIndex = 56;
-            this.label12.Text = "Slide U:";
+            this.lbTexSlideU.AutoSize = true;
+            this.lbTexSlideU.Location = new System.Drawing.Point(29, 110);
+            this.lbTexSlideU.Name = "lbTexSlideU";
+            this.lbTexSlideU.Size = new System.Drawing.Size(44, 13);
+            this.lbTexSlideU.TabIndex = 56;
+            this.lbTexSlideU.Text = "Slide U:";
             // 
             // label11
             // 
@@ -309,15 +309,15 @@
             this.Controls.Add(this.btnRemapTexture);
             this.Controls.Add(this.cbTexEClip);
             this.Controls.Add(this.TextureDestroyedTextBox);
-            this.Controls.Add(this.label107);
+            this.Controls.Add(this.lbTextureDestroyed);
             this.Controls.Add(this.txtTexSlideV);
             this.Controls.Add(this.txtTexSlideU);
             this.Controls.Add(this.txtTexDamage);
             this.Controls.Add(this.txtTexLight);
             this.Controls.Add(this.TextureIDTextBox);
-            this.Controls.Add(this.label130);
+            this.Controls.Add(this.lbTexSlideV);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.label12);
+            this.Controls.Add(this.lbTexSlideU);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
@@ -339,13 +339,13 @@
         private System.Windows.Forms.Button btnRemapTexture;
         private System.Windows.Forms.ComboBox cbTexEClip;
         private System.Windows.Forms.TextBox TextureDestroyedTextBox;
-        private System.Windows.Forms.Label label107;
+        private System.Windows.Forms.Label lbTextureDestroyed;
         private System.Windows.Forms.TextBox txtTexSlideV;
         private System.Windows.Forms.TextBox txtTexSlideU;
         private System.Windows.Forms.TextBox txtTexDamage;
         private System.Windows.Forms.TextBox txtTexLight;
         private System.Windows.Forms.TextBox TextureIDTextBox;
-        private System.Windows.Forms.Label label130;
+        private System.Windows.Forms.Label lbTexSlideV;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.CheckBox cbTexHoardGoal;
         private System.Windows.Forms.CheckBox cbTexRedGoal;
@@ -353,7 +353,7 @@
         private System.Windows.Forms.CheckBox cbTexForcefield;
         private System.Windows.Forms.CheckBox cbTexWater;
         private System.Windows.Forms.CheckBox cbTexLava;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label lbTexSlideU;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;

@@ -38,7 +38,7 @@ namespace Descent2Workshop.EditorPanels
     {
         private VClip clip;
         private int vclipID;
-        private PIGFile piggyFile;
+        private IImageProvider piggyFile;
         private Palette palette;
         private bool isLocked = false;
         private TransactionManager transactionManager;
@@ -67,7 +67,7 @@ namespace Descent2Workshop.EditorPanels
             pbAnimFramePreview.Image = PiggyBitmapUtilities.GetBitmap(piggyFile, palette, clip.Frames[frame]);
         }
 
-        public void Update(int number, VClip clip, PIGFile piggyFile, Palette palette)
+        public void Update(int number, VClip clip, IImageProvider piggyFile, Palette palette)
         {
             isLocked = true;
             vclipID = number;

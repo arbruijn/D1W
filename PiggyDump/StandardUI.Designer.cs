@@ -32,26 +32,19 @@
             this.mainMenu1 = new System.Windows.Forms.MainMenu(this.components);
             this.FileMenu = new System.Windows.Forms.MenuItem();
             this.NewMenu = new System.Windows.Forms.MenuItem();
-            this.NewHXMMenu = new System.Windows.Forms.MenuItem();
-            this.NewVHAMMenu = new System.Windows.Forms.MenuItem();
             this.NewPIGMenu = new System.Windows.Forms.MenuItem();
-            this.NewPOGMenu = new System.Windows.Forms.MenuItem();
             this.NewHOGMenu = new System.Windows.Forms.MenuItem();
             this.menuItem3 = new System.Windows.Forms.MenuItem();
             this.OpenHAMMenu = new System.Windows.Forms.MenuItem();
-            this.OpenVHAMMenu = new System.Windows.Forms.MenuItem();
-            this.OpenHXMMenu = new System.Windows.Forms.MenuItem();
             this.menuItem2 = new System.Windows.Forms.MenuItem();
             this.OpenHOGMenu = new System.Windows.Forms.MenuItem();
             this.OpenPIGMenu = new System.Windows.Forms.MenuItem();
-            this.OpenPOGMenu = new System.Windows.Forms.MenuItem();
             this.OpenSNDMenu = new System.Windows.Forms.MenuItem();
             this.menuItem10 = new System.Windows.Forms.MenuItem();
             this.ExitMenu = new System.Windows.Forms.MenuItem();
             this.OptionsMenu = new System.Windows.Forms.MenuItem();
             this.SetHOGMenu = new System.Windows.Forms.MenuItem();
             this.SetPIGMenu = new System.Windows.Forms.MenuItem();
-            this.SetSNDMenu = new System.Windows.Forms.MenuItem();
             this.menuItem26 = new System.Windows.Forms.MenuItem();
             this.OptionsMenuC = new System.Windows.Forms.MenuItem();
             this.ViewersMenu = new System.Windows.Forms.MenuItem();
@@ -62,6 +55,7 @@
             this.DebugMenu = new System.Windows.Forms.MenuItem();
             this.DumpDescent1PigMenuItem = new System.Windows.Forms.MenuItem();
             this.DumpDescent2PigMenuItem = new System.Windows.Forms.MenuItem();
+            this.menuItem1 = new System.Windows.Forms.MenuItem();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -224,7 +218,6 @@
             this.label76 = new System.Windows.Forms.Label();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.tbLog = new System.Windows.Forms.TextBox();
-            this.menuItem1 = new System.Windows.Forms.MenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.tabPage10.SuspendLayout();
@@ -264,12 +257,9 @@
             this.NewMenu,
             this.menuItem3,
             this.OpenHAMMenu,
-            this.OpenVHAMMenu,
-            this.OpenHXMMenu,
             this.menuItem2,
             this.OpenHOGMenu,
             this.OpenPIGMenu,
-            this.OpenPOGMenu,
             this.OpenSNDMenu,
             this.menuItem10,
             this.ExitMenu});
@@ -279,37 +269,18 @@
             // 
             this.NewMenu.Index = 0;
             this.NewMenu.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
-            this.NewHXMMenu,
-            this.NewVHAMMenu,
             this.NewPIGMenu,
-            this.NewPOGMenu,
             this.NewHOGMenu});
             this.NewMenu.Text = "New";
             // 
-            // NewHXMMenu
-            // 
-            this.NewHXMMenu.Index = 0;
-            this.NewHXMMenu.Text = "HXM";
-            this.NewHXMMenu.Click += new System.EventHandler(this.NewHXMFileMenu_Click);
-            // 
-            // NewVHAMMenu
-            // 
-            this.NewVHAMMenu.Index = 1;
-            this.NewVHAMMenu.Text = "V-HAM";
-            // 
             // NewPIGMenu
             // 
-            this.NewPIGMenu.Index = 2;
+            this.NewPIGMenu.Index = 0;
             this.NewPIGMenu.Text = ".PIG";
-            // 
-            // NewPOGMenu
-            // 
-            this.NewPOGMenu.Index = 3;
-            this.NewPOGMenu.Text = ".POG";
             // 
             // NewHOGMenu
             // 
-            this.NewHOGMenu.Index = 4;
+            this.NewHOGMenu.Index = 1;
             this.NewHOGMenu.Text = ".HOG";
             this.NewHOGMenu.Click += new System.EventHandler(this.menuItem12_Click);
             // 
@@ -321,58 +292,40 @@
             // OpenHAMMenu
             // 
             this.OpenHAMMenu.Index = 2;
-            this.OpenHAMMenu.Text = "Open .HAM...";
+            this.OpenHAMMenu.Text = "Open .PIG for Game Data...";
             this.OpenHAMMenu.Click += new System.EventHandler(this.menuItem4_Click);
-            // 
-            // OpenVHAMMenu
-            // 
-            this.OpenVHAMMenu.Index = 3;
-            this.OpenVHAMMenu.Text = "Open V-HAM";
-            this.OpenVHAMMenu.Click += new System.EventHandler(this.menuItem6_Click_1);
-            // 
-            // OpenHXMMenu
-            // 
-            this.OpenHXMMenu.Index = 4;
-            this.OpenHXMMenu.Text = "Open .HXM...";
-            this.OpenHXMMenu.Click += new System.EventHandler(this.OpenHXMMenu_Click);
             // 
             // menuItem2
             // 
-            this.menuItem2.Index = 5;
+            this.menuItem2.Index = 3;
             this.menuItem2.Text = "-";
             // 
             // OpenHOGMenu
             // 
-            this.OpenHOGMenu.Index = 6;
+            this.OpenHOGMenu.Index = 4;
             this.OpenHOGMenu.Text = "Open .HOG...";
             this.OpenHOGMenu.Click += new System.EventHandler(this.menuItem11_Click);
             // 
             // OpenPIGMenu
             // 
-            this.OpenPIGMenu.Index = 7;
-            this.OpenPIGMenu.Text = "Open .PIG...";
+            this.OpenPIGMenu.Index = 5;
+            this.OpenPIGMenu.Text = "Open .PIG for Bitmaps...";
             this.OpenPIGMenu.Click += new System.EventHandler(this.LoadPIGMenu_Click);
-            // 
-            // OpenPOGMenu
-            // 
-            this.OpenPOGMenu.Index = 8;
-            this.OpenPOGMenu.Text = "Open .POG...";
-            this.OpenPOGMenu.Click += new System.EventHandler(this.OpenPOGMenu_Click);
             // 
             // OpenSNDMenu
             // 
-            this.OpenSNDMenu.Index = 9;
-            this.OpenSNDMenu.Text = "Open .S**...";
+            this.OpenSNDMenu.Index = 6;
+            this.OpenSNDMenu.Text = "Open .PIG for Sounds...";
             this.OpenSNDMenu.Click += new System.EventHandler(this.menuItem24_Click);
             // 
             // menuItem10
             // 
-            this.menuItem10.Index = 10;
+            this.menuItem10.Index = 7;
             this.menuItem10.Text = "-";
             // 
             // ExitMenu
             // 
-            this.ExitMenu.Index = 11;
+            this.ExitMenu.Index = 8;
             this.ExitMenu.Text = "Exit";
             // 
             // OptionsMenu
@@ -381,7 +334,6 @@
             this.OptionsMenu.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
             this.SetHOGMenu,
             this.SetPIGMenu,
-            this.SetSNDMenu,
             this.menuItem26,
             this.OptionsMenuC});
             this.OptionsMenu.Text = "Options";
@@ -398,20 +350,14 @@
             this.SetPIGMenu.Text = "Set Primary .PIG";
             this.SetPIGMenu.Click += new System.EventHandler(this.DefaultPIGMenu_Click);
             // 
-            // SetSNDMenu
-            // 
-            this.SetSNDMenu.Index = 2;
-            this.SetSNDMenu.Text = "Set Primary .SXX";
-            this.SetSNDMenu.Click += new System.EventHandler(this.menuItem25_Click);
-            // 
             // menuItem26
             // 
-            this.menuItem26.Index = 3;
+            this.menuItem26.Index = 2;
             this.menuItem26.Text = "-";
             // 
             // OptionsMenuC
             // 
-            this.OptionsMenuC.Index = 4;
+            this.OptionsMenuC.Index = 3;
             this.OptionsMenuC.Text = "Options...";
             this.OptionsMenuC.Click += new System.EventHandler(this.OptionsMenu_Click);
             // 
@@ -468,6 +414,12 @@
             this.DumpDescent2PigMenuItem.Index = 1;
             this.DumpDescent2PigMenuItem.Text = "Dump Descent 2 PIG...";
             this.DumpDescent2PigMenuItem.Click += new System.EventHandler(this.DumpDescent2PigMenuItem_Click);
+            // 
+            // menuItem1
+            // 
+            this.menuItem1.Index = 2;
+            this.menuItem1.Text = "Export unused textures";
+            this.menuItem1.Click += new System.EventHandler(this.menuItem1_Click);
             // 
             // textBox3
             // 
@@ -2069,13 +2021,7 @@
             this.tbLog.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.tbLog.Size = new System.Drawing.Size(404, 165);
             this.tbLog.TabIndex = 2;
-            this.tbLog.Text = "Descent II Workshop log";
-            // 
-            // menuItem1
-            // 
-            this.menuItem1.Index = 2;
-            this.menuItem1.Text = "Export unused textures";
-            this.menuItem1.Click += new System.EventHandler(this.menuItem1_Click);
+            this.tbLog.Text = "D1W log";
             // 
             // StandardUI
             // 
@@ -2088,7 +2034,7 @@
             this.MaximizeBox = false;
             this.Menu = this.mainMenu1;
             this.Name = "StandardUI";
-            this.Text = "Descent II Workshop";
+            this.Text = "D1W";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.StandardUI_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -2297,7 +2243,6 @@
         private System.Windows.Forms.Label label76;
         private System.Windows.Forms.MenuItem OpenHAMMenu;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
-        private System.Windows.Forms.MenuItem NewVHAMMenu;
         private System.Windows.Forms.MenuItem NewPIGMenu;
         private System.Windows.Forms.MenuItem OpenPIGMenu;
         private System.Windows.Forms.MenuItem menuItem10;
@@ -2307,22 +2252,16 @@
         private System.Windows.Forms.MenuItem SetPIGMenu;
         private System.Windows.Forms.MenuItem HelpMenu;
         private System.Windows.Forms.MenuItem AboutMenu;
-        private System.Windows.Forms.MenuItem NewPOGMenu;
-        private System.Windows.Forms.MenuItem OpenPOGMenu;
         private System.Windows.Forms.MenuItem OpenHOGMenu;
         private System.Windows.Forms.MenuItem NewHOGMenu;
         private System.Windows.Forms.TextBox tbLog;
         private System.Windows.Forms.MenuItem ViewersMenu;
         private System.Windows.Forms.MenuItem ViewPOFMenu;
         private System.Windows.Forms.MenuItem OpenSNDMenu;
-        private System.Windows.Forms.MenuItem SetSNDMenu;
         private System.Windows.Forms.MenuItem menuItem26;
         private System.Windows.Forms.MenuItem OptionsMenuC;
         private System.Windows.Forms.MenuItem ViewFNTMenu;
-        private System.Windows.Forms.MenuItem OpenVHAMMenu;
-        private System.Windows.Forms.MenuItem OpenHXMMenu;
         private System.Windows.Forms.MenuItem menuItem2;
-        private System.Windows.Forms.MenuItem NewHXMMenu;
         private System.Windows.Forms.MenuItem DebugMenu;
         private System.Windows.Forms.MenuItem DumpDescent1PigMenuItem;
         private System.Windows.Forms.MenuItem DumpDescent2PigMenuItem;

@@ -43,7 +43,7 @@ namespace Descent2Workshop
         {
             txtHogFilename.Text = StandardUI.options.GetOption("HOGFile", "");
             txtPigFilename.Text = StandardUI.options.GetOption("PIGFile", "");
-            txtSndFilename.Text = StandardUI.options.GetOption("SNDFile", "");
+            //txtSndFilename.Text = StandardUI.options.GetOption("SNDFile", "");
             chkNoPMView.Checked = bool.Parse(StandardUI.options.GetOption("CompatObjBitmaps", bool.FalseString));
             chkTraces.Checked = bool.Parse(StandardUI.options.GetOption("TraceModels", bool.FalseString));
             txtTraceDir.Text = StandardUI.options.GetOption("TraceDir", "");
@@ -52,7 +52,7 @@ namespace Descent2Workshop
 
         public string HogFilename { get { return txtHogFilename.Text; } }
         public string PigFilename { get { return txtPigFilename.Text; } }
-        public string SndFilename { get { return txtSndFilename.Text; } }
+        //public string SndFilename { get { return txtSndFilename.Text; } }
         public string TraceDir { get { return txtTraceDir.Text; } }
         public bool Traces { get { return chkTraces.Checked; } }
         public bool NoPMView { get { return chkNoPMView.Checked; } }

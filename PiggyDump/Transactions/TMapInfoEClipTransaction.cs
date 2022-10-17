@@ -38,9 +38,9 @@ namespace Descent2Workshop.Transactions
 
         private int oldTmapIndex = -1;
         private EditorHAMFile datafile;
-        private PIGFile pigfile;
+        private IImageProvider pigfile;
 
-        public TMapInfoEClipTransaction(string label, int page, int tab, EditorHAMFile datafile, PIGFile pigfile, int index, int newEClip) : base(label, null, "", page, tab)
+        public TMapInfoEClipTransaction(string label, int page, int tab, EditorHAMFile datafile, IImageProvider pigfile, int index, int newEClip) : base(label, null, "", page, tab)
         {
             newValue = newEClip;
             tmapIndex = index;
