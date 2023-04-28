@@ -899,7 +899,7 @@ namespace Descent2Workshop
 
         private void menuItem6_Click(object sender, EventArgs e)
         {
-            saveFileDialog1.Filter = "Bitmap table files|*.TBL";
+            saveFileDialog1.Filter = "Bitmap table files|*.tbl";
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 StreamWriter sw = new StreamWriter(File.Open(saveFileDialog1.FileName, FileMode.Create));
