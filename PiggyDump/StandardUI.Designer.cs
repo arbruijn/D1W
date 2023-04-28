@@ -2034,7 +2034,7 @@
             this.MaximizeBox = false;
             this.Menu = this.mainMenu1;
             this.Name = "StandardUI";
-            this.Text = "D1W";
+            this.Text = "D1W 1.1";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.StandardUI_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();

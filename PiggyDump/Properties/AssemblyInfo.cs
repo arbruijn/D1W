@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("PiggyDump")]
-[assembly: AssemblyDescription("Descent 2 Workshop, multifeatured Descent 2 editor")]
+[assembly: AssemblyTitle("D1W")]
+[assembly: AssemblyDescription("Multifeatured Descent 1 editor based on Descent 2 Workshop")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("InsanityBringer")]
-[assembly: AssemblyProduct("PiggyDump")]
-[assembly: AssemblyCopyright("Copyright © InsanityBringer 2019")]
+[assembly: AssemblyCompany("Arne de Bruijn")]
+[assembly: AssemblyProduct("D1W")]
+[assembly: AssemblyCopyright("Copyright © Arne de Bruijn, InsanityBringer 2023")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.0.0")]
-[assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: AssemblyVersion("1.1.0.0")]
+[assembly: AssemblyFileVersion("1.1.0.0")]
