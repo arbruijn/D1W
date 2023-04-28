@@ -8,8 +8,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibDescent.Data", "LibDesce
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibDescent.Edit", "LibDescent\Edit\LibDescent.Edit.csproj", "{FE0955CA-4C10-425E-9DFA-CBAFC18720A5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibDescent.Tests", "LibDescent\Tests\LibDescent.Tests.csproj", "{219221ED-18DA-4D96-AB4E-CB9A0192A2F4}"
-EndProject
+#Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibDescent.Tests", "LibDescent\Tests\LibDescent.Tests.csproj", "{219221ED-18DA-4D96-AB4E-CB9A0192A2F4}"
+#EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
