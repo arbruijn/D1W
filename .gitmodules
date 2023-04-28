@@ -1,3 +1,4 @@
 [submodule "LibDescent"]
 	path = LibDescent
 	url = https://github.com/arbruijn/LibDescent.git
+	branch = d1w
