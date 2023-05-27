@@ -952,6 +952,7 @@ namespace Descent2Workshop
             else
             {
                 datafile.Write(stream);
+                StandardUI.CheckAdjustPigSize(stream);
                 if (saveHandler.FinalizeStream())
                 {
                     MessageBox.Show(this, string.Format("Error writing save file {0}:\r\n{1}", saveHandler.GetUIName(), saveHandler.GetErrorMsg()));

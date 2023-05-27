@@ -211,6 +211,7 @@ namespace Descent2Workshop
                     datafile.Sounds[i].Data = cache.GetSound(i);
                 }
                 datafile.Write(stream);
+                StandardUI.CheckAdjustPigSize(stream);
                 stream.Dispose();
                 if (saveHandler.FinalizeStream())
                 {

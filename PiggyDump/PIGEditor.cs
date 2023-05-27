@@ -76,7 +76,7 @@ namespace Descent2Workshop
         private void DoSave(string filename)
         {
             string statusMsg;
-            if (!FileUtilities.SaveDataFile(filename, datafile, out statusMsg))
+            if (!FileUtilities.SaveDataFile(filename, datafile, out statusMsg, true))
             {
                 MessageBox.Show(statusMsg, "Error saving PIG file.", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
