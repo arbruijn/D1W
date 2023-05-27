@@ -52,6 +52,7 @@
             this.menuItem9 = new System.Windows.Forms.MenuItem();
             this.ExtractMenuItem = new System.Windows.Forms.MenuItem();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.MakeEmptyMenuItem = new System.Windows.Forms.MenuItem();
             this.SuspendLayout();
             // 
             // listView1
@@ -151,6 +152,7 @@
             this.InsertMenuItem,
             this.ImportMenuItem,
             this.DeleteMenuItem,
+            this.MakeEmptyMenuItem,
             this.menuItem9,
             this.ExtractMenuItem});
             this.EditMenu.Text = "Edit";
@@ -191,18 +193,24 @@
             // 
             // menuItem9
             // 
-            this.menuItem9.Index = 6;
+            this.menuItem9.Index = 7;
             this.menuItem9.Text = "-";
             // 
             // ExtractMenuItem
             // 
-            this.ExtractMenuItem.Index = 7;
+            this.ExtractMenuItem.Index = 8;
             this.ExtractMenuItem.Text = "Extract";
             this.ExtractMenuItem.Click += new System.EventHandler(this.ExtractMenu_Click);
             // 
             // openFileDialog1
             // 
             this.openFileDialog1.Filter = ".WAV Files|*.wav";
+            // 
+            // MakeEmptyMenuItem
+            // 
+            this.MakeEmptyMenuItem.Index = 6;
+            this.MakeEmptyMenuItem.Text = "Make Empty";
+            this.MakeEmptyMenuItem.Click += new System.EventHandler(this.MakeEmptyMenuItem_Click);
             // 
             // SXXEditor
             // 
@@ -244,5 +252,6 @@
         private System.Windows.Forms.MenuItem UndoMenuItem;
         private System.Windows.Forms.MenuItem RedoMenuItem;
         private System.Windows.Forms.MenuItem menuItem5;
+        private System.Windows.Forms.MenuItem MakeEmptyMenuItem;
     }
 }

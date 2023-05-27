@@ -295,5 +295,24 @@ namespace Descent2Workshop
                 listView1.Items[id] = lvi;
             }
         }
+
+        private void MakeEmptyMenuItem_Click(object sender, EventArgs e)
+        {
+            if (listView1.SelectedIndices.Count == 0) return;
+
+            int id = listView1.SelectedIndices[0];
+            string name = datafile.Sounds[id].Name;
+
+            BasicSoundFile file = new BasicSoundFile() { Data = new byte[0] };
+            ReplaceSoundTransaction transaction = new ReplaceSoundTransaction(datafile, cache, id, name, file.Data);
+            transactionManager.ApplyTransaction(transaction);
+
+            SoundData sound = datafile.Sounds[id];
+            ListViewItem lvi = new ListViewItem(sound.Name);
+            lvi.SubItems.Add(sound.Length.ToString());
+            lvi.SubItems.Add(sound.Offset.ToString());
+            lvi.SubItems.Add(id.ToString());
+            listView1.Items[id] = lvi;
+        }
     }
 }
