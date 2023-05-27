@@ -341,6 +341,7 @@ namespace Descent2Workshop
                 options.SetOption("TraceModels", config.Traces.ToString());
                 options.SetOption("TraceDir", config.TraceDir);
                 options.SetOption("PMVersion", config.PofVer.ToString());
+                options.SetOption("PigOriginalSize", config.PigOriginalSize.ToString());
 
                 defaultHogFile = LoadDefaultHOG(config.HogFilename);
                 if (defaultHogFile != null)
@@ -741,6 +742,20 @@ namespace Descent2Workshop
             }
 
             sw.Dispose();
+        }
+
+        public static void CheckAdjustPigSize(Stream stream)
+        {
+            int originalPigSize = 4920305;
+            if (!bool.Parse(StandardUI.options.GetOption("PigOriginalSize", bool.FalseString)))
+                return;
+            if (stream.Length > originalPigSize)
+            {
+                MessageBox.Show("Warning: pig file size (" + stream.Length + ") is larger than original size (" +
+                    originalPigSize + ")");
+                return;
+            }
+            stream.SetLength(originalPigSize);
         }
     }
 }

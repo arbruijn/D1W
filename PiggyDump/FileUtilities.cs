@@ -77,7 +77,7 @@ namespace Descent2Workshop
             return success;
         }
 
-        public static bool SaveDataFile(string filename, IDataFile dataFile, out string statusMsg)
+        public static bool SaveDataFile(string filename, IDataFile dataFile, out string statusMsg, bool isPig = false)
         {
             bool success = true;
             statusMsg = "";
@@ -90,6 +90,8 @@ namespace Descent2Workshop
             {
                 stream = File.OpenWrite(workingFilename);
                 dataFile.Write(stream);
+                if (isPig)
+                	StandardUI.CheckAdjustPigSize(stream);
             }
             catch (FileNotFoundException)
             {

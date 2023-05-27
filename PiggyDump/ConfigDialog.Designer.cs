@@ -49,6 +49,7 @@
             this.txtTraceDir = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.chkTraces = new System.Windows.Forms.CheckBox();
+            this.chkPigOriginalSize = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -58,7 +59,7 @@
             // 
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Location = new System.Drawing.Point(320, 183);
+            this.btnCancel.Location = new System.Drawing.Point(320, 200);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 0;
@@ -69,7 +70,7 @@
             // 
             this.btnOK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnOK.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btnOK.Location = new System.Drawing.Point(239, 183);
+            this.btnOK.Location = new System.Drawing.Point(239, 200);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(75, 23);
             this.btnOK.TabIndex = 1;
@@ -85,11 +86,12 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(407, 177);
+            this.tabControl1.Size = new System.Drawing.Size(407, 194);
             this.tabControl1.TabIndex = 2;
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.chkPigOriginalSize);
             this.tabPage1.Controls.Add(this.chkNoPMView);
             this.tabPage1.Controls.Add(this.button5);
             this.tabPage1.Controls.Add(this.txtSndFilename);
@@ -103,7 +105,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(399, 151);
+            this.tabPage1.Size = new System.Drawing.Size(399, 168);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Basic";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -204,7 +206,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(399, 151);
+            this.tabPage2.Size = new System.Drawing.Size(399, 173);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Advanced";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -266,13 +268,23 @@
             this.chkTraces.Text = "Enable Polymodel traces";
             this.chkTraces.UseVisualStyleBackColor = true;
             // 
+            // chkPigOriginalSize
+            // 
+            this.chkPigOriginalSize.AutoSize = true;
+            this.chkPigOriginalSize.Location = new System.Drawing.Point(11, 146);
+            this.chkPigOriginalSize.Name = "chkPigOriginalSize";
+            this.chkPigOriginalSize.Size = new System.Drawing.Size(142, 17);
+            this.chkPigOriginalSize.TabIndex = 10;
+            this.chkPigOriginalSize.Text = "Preserve original pig size";
+            this.chkPigOriginalSize.UseVisualStyleBackColor = true;
+            // 
             // ConfigDialog
             // 
             this.AcceptButton = this.btnOK;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancel;
-            this.ClientSize = new System.Drawing.Size(407, 218);
+            this.ClientSize = new System.Drawing.Size(407, 235);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.btnCancel);
@@ -315,5 +327,6 @@
         private System.Windows.Forms.TextBox txtTraceDir;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.CheckBox chkTraces;
+        private System.Windows.Forms.CheckBox chkPigOriginalSize;
     }
 }

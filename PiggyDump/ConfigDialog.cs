@@ -48,6 +48,7 @@ namespace Descent2Workshop
             chkTraces.Checked = bool.Parse(StandardUI.options.GetOption("TraceModels", bool.FalseString));
             txtTraceDir.Text = StandardUI.options.GetOption("TraceDir", "");
             cbPofVer.SelectedIndex = int.Parse(StandardUI.options.GetOption("PMVersion", "8")) - 7;
+            chkPigOriginalSize.Checked = bool.Parse(StandardUI.options.GetOption("PigOriginalSize", bool.FalseString));
         }
 
         public string HogFilename { get { return txtHogFilename.Text; } }
@@ -57,5 +58,6 @@ namespace Descent2Workshop
         public bool Traces { get { return chkTraces.Checked; } }
         public bool NoPMView { get { return chkNoPMView.Checked; } }
         public int PofVer { get { return cbPofVer.SelectedIndex + 7; } }
+        public bool PigOriginalSize { get { return chkPigOriginalSize.Checked; } }
     }
 }
